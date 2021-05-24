@@ -5,3 +5,124 @@
   margin: 0 auto;
   border: 4px solid #000;
 }
+
+/* toolbar */
+#toolbar {
+  background: white;
+  height: 50px;
+  display: flex;
+}
+
+#toolbar div {
+  flex: 1;
+  margin-bottom: 0px;
+  display: inline;
+}
+#toolbar .toolbar-logo {
+  min-width: 88px;
+  min-height: 50px;
+}
+#toolbar .toolbar-logo img {
+  width: 100%;
+  height: 100%;
+}
+#toolbar .toolbar-text {
+  transform: translate(10%, 25%);
+  text-align: center;
+  font-size: 70%;
+  display: flex;
+}
+#toolbar .toolbar-text img {
+  margin: 0 5% 0 5%;
+  width: 22px;
+  height: 22px;
+}
+
+#toolbar .toolbar-search {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: center;
+  transform: translate(0%, 25%);
+}
+#toolbar .search-icon img {
+  align-items: center;
+}
+
+/* banner swiper */
+#banner {
+  margin: 10px 0 10px 0;
+  width: 100%;
+  height: auto;
+}
+#banner .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+#banner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+#banner .swiper-container .mySwiper {
+  width: 100%;
+  height: 100%;
+}
+#banner .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#banner .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#banner .swiper-slide {
+  width: 75%;
+}
+
+/* food-kinds swiper */
+#food-kinds .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#food-kinds .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#food-kinds .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

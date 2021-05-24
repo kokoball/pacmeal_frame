@@ -12,94 +12,75 @@
 <body>
     <div id="wrap">
 		<!-- Main -->
-		
-			<section id="toolbar">
-				<div><img id="logo" src="images/logo.png"></div>
-				<div class="toolbar_text">팩밀</div>
-				<div><img id="search_icon" src="images/searchicon.png"></div>
-			</section>
+        <section id="toolbar">
+            <div class="toolbar-logo"><img src="images/gray_box.png"></div>
+            <div class="toolbar-text">광주전체<img src="images/gray_box.png"></div>
+            <div class="toolbar-search"><img src="images/icon/search.svg"></div>
+        </section>
 
-			<!-- Nav -->
-			<div id="nav">
-				<!--nav menu-->
-				<input id="tab1" type="radio" name="tabs" checked>
-				<label for="tab1">마감할인</label>
+        <!-- Banner Event-->
+        <section id="banner">
+            <div class="swiper-container banner-Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                </div>
+            </div>
+        </section>
 
-				<input id="tab2" type="radio" name="tabs">
-				<label for="tab2">매장식사</label>
-
-				<input id="tab3" type="radio" name="tabs">
-				<label for="tab3">커뮤니티</label>
-
-				<!-- Banner -->
-				<section id="content1">
-					<div class="inner">
-						<!-- slideshow -->
-						<div class="main-slide-wrapper">
-							<div class="swiper-container first">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="images/weekly_pick_1.png">
-									</div>
-									<div class="swiper-slide">
-										<img src="images/weekly_pick_1.png">
-									</div>
-									<div class="swiper-slide">
-										<img src="images/weekly_pick_1.png">
-									</div>
-									<div class="swiper-slide">
-										<img src="images/weekly_pick_1.png">
-									</div>
-									<div class="swiper-slide">
-										<img src="images/weekly_pick_1.png">
-									</div>
-								</div>
-								<!-- Add Pagination -->
-								<div class="swiper-pagination"></div>
-							</div>
-						</div>
-					</div> 
-				</section>
-			</div>
-
-			<!-- new tab -->
-			<section id="galleries">
-				<!-- Photo Galleries -->
-				<div class="gallery">
-					<h2>팩밀의 AI 추천</h2>
-					<div class="swiper-container second">
-						<div class="swiper-wrapper">
-							<!-- Slides -->
-							<div class="swiper-slide">
-								<img src="images/hashtag1.png">
-								
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag2.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag3.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag1.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag2.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag3.png">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/hashtag1.png">
-							</div>
-						</div>
-						<div class="swiper-pagination none"></div> 
-					</div>  
-				</div>
-			</section>
-
-
+        <!-- Food Kinds-->
+        <section id="food-kinds">
+            <h4>광주 전체 음식 종류별</h4>
+            <div class="swiper-container food-kinds-Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                    <div class="swiper-slide"><img src="images/cody05.jpg"></div>
+                </div>
+            </div>
+        </section>
 
 	</div>
+
+    <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".banner-Swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+    </script>
+    <script>
+    var swiper = new Swiper(".food-kinds-Swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+    </script>
+
 </body>
 </html>
