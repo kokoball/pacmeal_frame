@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Search Page_1</title>
+</head>
+<body>
+    <div id="wrap">
+		<!-- Main -->
+        <section id="toolbar">
+            <div class="toolbar-logo"><img src="images/gray_box.png"></div>
+            <div class="toolbar-text">광주전체<img src="images/gray_box.png"></div>
+            <div class="toolbar-search"><img src="images/icon/search.svg"></div>
+        </section>
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+            <div><img src="images/icon/home_icon.svg"><div>홈</div></div>
+            <div><img src="images/icon/map_icon.svg"><div>내 주변</div></div>
+            <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
+            <div><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></div>
+        </div>
+
+
+	</div>
+
+    <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Banner Swiper -->
+    <script>
+        var swiper = new Swiper(".banner-Swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+    </script>
+
+    <!-- Food Kinds Swiper -->
+    <script>
+    var swiper = new Swiper(".food-kinds-Swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+    </script>
+
+    <!-- Time Sale Swiper -->
+    <script>
+        var swiper = new Swiper(".time-sale-Swiper", {
+            slidesPerView: "auto",
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
+    </script>
+
+    <!-- Near Shop Swiper -->
+    <script>
+        var swiper = new Swiper(".near-shop-Swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
