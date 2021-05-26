@@ -1,0 +1,150 @@
+/* --Region Selection Page-- */
+
+#wrap {
+  width: 100%;
+  /* 320px */
+  height: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  /* border: 4px solid #000; */
+}
+
+/* toolbar */
+#toolbar {
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-bottom: solid 2px #e1e1e1;
+}
+#toolbar div {
+  flex: 1;
+  margin-bottom: 0px;
+  display: inline;
+}
+#toolbar .RS-close {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: center;
+  transform: translate(-45%, 25%);
+}
+#toolbar .RS-close img {
+  align-items: center;
+}
+
+/* navbar */
+#nabar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.navbar-primary {
+  flex: 1;
+  background-color: #f4f4f4;
+  bottom: 0px;
+  left: 0px;
+  width: 30%;
+  height: 100%;
+  min-height: 500px;
+  z-index: 8;
+}
+
+.btn-expand-collapse {
+  position: absolute;
+  display: block;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  border-top: solid 1px #666;
+  color: grey;
+  text-align: center;
+}
+
+.btn-expand-collapse:hover,
+.btn-expand-collapse:focus {
+  background-color: #222;
+  color: white;
+}
+
+.btn-expand-collapse:active {
+  background-color: #111;
+}
+
+.navbar-primary-menu .nav-label {
+  font-size: 80%;
+  text-decoration: none;
+}
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-primary-menu li a {
+  height: 2em;
+  text-decoration: none;
+  display: block;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  border-bottom: solid 1px #444;
+  color: #000;
+}
+
+.navbar-primary-menu li a:hover {
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: #000;
+  border: solid 1px #f4f4f4;
+}
+
+.navbar-primary-menu li a .glyphicon {
+  margin-right: 6px;
+}
+
+.navbar-primary-menu li a:hover .glyphicon {
+  color: orchid;
+}
+
+.main-content {
+  flex: 4;
+  width: 100%;
+}
+.main-content .content-label {
+  margin: 0;
+  display: block;
+  padding: 2%;
+}
+
+.collapsed + .main-content {
+  margin-left: 60px;
+}
+
+/* Bottom Menu Bar */
+#bottom-menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: solid 2px #e1e1e1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  z-index: 999;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+#bottom-menu button {
+  width: 90%;
+  height: 2.25rem;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 0.5em;
+  transform: translate(0%, 30%);
+}
