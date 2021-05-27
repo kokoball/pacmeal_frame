@@ -1,0 +1,107 @@
+/* --Region Selection Page-- */
+
+#wrap {
+  width: 100%;
+  /* 320px */
+  height: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  /* border: 4px solid #000; */
+}
+
+/* toolbar */
+#toolbar {
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-bottom: solid 2px #e1e1e1;
+}
+#toolbar div {
+  flex: 1;
+  margin-bottom: 0px;
+  display: inline;
+}
+#toolbar .RS-close {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: center;
+  transform: translate(-42%, 25%);
+}
+#toolbar .RS-close img {
+  align-items: center;
+}
+
+/* Bottom Menu Bar */
+.allWrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.tabBox {
+  margin: 0 auto;
+  display: flex;
+}
+.tab-link {
+  width: 50%;
+  display: inline-block;
+  padding: 3%;
+  text-align: center;
+  background-color: transparent;
+  color: #eeeeee;
+  cursor: pointer;
+  margin: 0;
+  border-bottom: solid 3px #e1e1e1;
+}
+.tab-link.current {
+  background-color: transparent;
+  color: #00d1c4;
+  font-weight: 600;
+  border-bottom: solid 3px #00d1c4;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.current {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: #d5d8d7;
+  font-size: 30px;
+  text-align: center;
+  line-height: 250px;
+}
+
+/* Bottom Menu Bar */
+#bottom-menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: solid 2px #e1e1e1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  z-index: 999;
+  display: flex;
+}
+#bottom-menu a {
+  text-decoration: none;
+}
+#bottom-menu a:link {
+  color: red;
+  text-decoration: none;
+}
+#bottom-menu a:visited {
+  color: black;
+  text-decoration: none;
+}
+#bottom-menu div {
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+#bottom-menu div div {
+  font-size: 55%;
+  font-weight: bold;
+}
