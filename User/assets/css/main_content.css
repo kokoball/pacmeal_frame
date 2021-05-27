@@ -32,6 +32,19 @@
 #toolbar .RS-close img {
   align-items: center;
 }
+/* Time Sale Page Toolbar */
+#toolbar .toolbar-1 {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: left;
+  transform: translate(0%, 25%);
+}
+#toolbar .toolbar-2 {
+  flex: 3;
+  text-align: center;
+  font-size: 100%;
+  transform: translate(0%, 25%);
+}
 
 /* Bottom Menu Bar */
 .allWrap {
@@ -65,11 +78,69 @@
 .tab-content.current {
   display: block;
   width: 100%;
-  height: 300px;
-  background-color: #d5d8d7;
-  font-size: 30px;
-  text-align: center;
-  line-height: 250px;
+  height: 20vh;
+  min-height: 130px;
+  margin-bottom: 3%;
+}
+.tab-content.current .content {
+  display: flex;
+  width: 100%;
+}
+.tab-content.current .content :nth-child(1) {
+  flex: 2;
+  padding: 3%;
+  width: 100%;
+  height: auto;
+}
+.tab-content.current .content :nth-child(2) {
+  flex: 3.5;
+  padding: 3%;
+  width: 100%;
+  height: 100%;
+}
+.tab-content.current .content :nth-child(2) p {
+  all: unset;
+  display: block;
+  padding: 1%;
+}
+.tab-content.current .content :nth-child(2) > :nth-child(1) {
+  font-size: 80%;
+  font-weight: bold;
+}
+.tab-content.current .content :nth-child(2) > :nth-child(2) {
+  font-size: 50%;
+}
+.tab-content.current .content :nth-child(2) > :nth-child(3) {
+  font-size: 50%;
+}
+.tab-content.current .content :nth-child(2) > :nth-child(5) {
+  font-size: 50%;
+}
+
+.tab-content.current .content :nth-child(2) div {
+  display: block;
+}
+.tab-content.current .content :nth-child(2) div p {
+  display: inline-block;
+}
+.tab-content.current .content :nth-child(2) .tab-1-c > :nth-child(1) {
+  color: #ff0000;
+  font-weight: bold;
+}
+.tab-content.current .content :nth-child(2) .tab-1-c > :nth-child(2) {
+  font-weight: bold;
+}
+.tab-content.current .content :nth-child(2) .tab-2-c > :nth-child(1) {
+  color: #ffc231;
+  font-weight: bold;
+}
+.tab-content.current .content :nth-child(2) .tab-2-c > :nth-child(2) {
+  color: #ffc231;
+  font-weight: bold;
+}
+.tab-content.current .content :nth-child(2) .tab-2-c > :nth-child(3) {
+  color: #dddddd;
+  font-size: 70%;
 }
 
 /* Bottom Menu Bar */
