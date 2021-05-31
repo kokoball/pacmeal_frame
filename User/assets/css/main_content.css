@@ -163,13 +163,91 @@
 #tab-1 > div > div:nth-child(1) > :nth-child(2) {
   z-index: 2;
   border: none;
-  background: url("/User/images/icon/like_off.svg") no-repeat;
-  background-size: 100%;
   position: absolute;
   width: 20%;
   height: 20%;
-  top: 2.3vh;
-  right: 2vw;
+  top: 2.5vh;
+  right: 2.5vw;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.active > .like-heart {
+  animation: animateHeart 0.3s linear forwards;
+}
+
+.like-heart .heart-fill {
+  fill: white;
+}
+
+.like-heart:hover .heart-fill {
+  fill: white;
+}
+
+.like-heart .heart-outline {
+  fill: black;
+}
+
+.active > .like-heart .heart-fill,
+.active > .like-heart .heart-outline {
+  fill: #ff3c49;
+}
+
+.like-button-btn {
+  display: inline-block;
+  border: 2px solid #ff3c49;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 0;
+}
+
+.like-button {
+  cursor: pointer;
+  padding: 11px;
+  width: 24px;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.like-button:hover {
+  background-color: #ffeaeb;
+}
+
+.active > .like-button {
+  animation: animateHeart 0.3s linear forwards;
+}
+
+.like-button .heart-fill {
+  fill: white;
+}
+
+.like-button:hover .heart-fill {
+  fill: #ffeaeb;
+  transform: scale(1.2);
+}
+.active > .like-button:hover .heart-fill {
+  transform: none;
+}
+
+.like-button .heart-outline {
+  fill: #ff3c49;
+}
+
+.active > .like-button .heart-fill {
+  fill: #ff3c49;
+}
+
+@keyframes animateHeart {
+  0% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Bottom Menu Bar */
@@ -298,3 +376,5 @@
   color: #dddddd;
   font-size: 70%;
 }
+
+/**/

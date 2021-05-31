@@ -12,7 +12,7 @@
     <div id="wrap">
 		<!-- Toolbar -->
         <section id="toolbar">
-            <div class="TS-close-1"><img src="images/icon/arrow-left.svg"></div>
+            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
             <div class="TS-close-2">오늘의 타임할인</div>
             <div class="TS-close-2"></div>
         </section>
@@ -117,6 +117,42 @@
         $(this).addClass('current');
         $("#" + tab_id).addClass('current');
     });
+    </script>
+    <script>
+        const burst = new mojs.Burst ({
+        left: 0, top: 0,
+        radius: { 0: 90 },
+        count: 14,
+        children : {
+            shape: 'circle',
+            fill: {'grey':'red'},
+            strokeWidth: { 1: 0},
+            angle: { 360: 0},
+            radius: { 30 : 5 },
+            duration: 1000
+        }
+        });
+
+        const check = document.querySelector('label');
+        let checked = check.checked;
+
+        function heartBurst(e) {
+        if (!checked) {
+            const pos = this.getBoundingClientRect();
+            
+            const timeline = new mojs.Timeline({ speed: 1.5 });
+            
+            timeline.add(burst);
+            
+            burst.tune({
+            'left': '50%',
+            'top': '50%'
+            });
+            timeline.play();
+        }
+        checked = !checked;
+        } 
+        check.addEventListener('click', heartBurst);
     </script>
 </body>
 </html>
