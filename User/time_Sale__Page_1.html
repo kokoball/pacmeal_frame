@@ -21,9 +21,16 @@
         <section id="time-sale-menu">
             <div class="title">
                 <p class="t1">광주전체</p>
-                <div>
-                    <p class="t2">최신순</p>
-                    <img src="images/icon/bottom_arrow.svg">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        <p class="t2">최신순</p>
+                        <img class="t3" src="images/icon/bottom_arrow.svg">
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#near">가까운 순</a>
+                        <a href="#discount">할인높은 순</a>
+                        <a href="#follower">찜 많은 순</a>
+                    </div>
                 </div>
             </div>
             <div class="TS-content">
@@ -106,53 +113,24 @@
         </div>
 	</div>
 
-    <!-- Scripts -->
+    <!-- Drop Down Scripts-->
     <script>
-        $('.tab-link').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('.tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-    </script>
-    <script>
-        const burst = new mojs.Burst ({
-        left: 0, top: 0,
-        radius: { 0: 90 },
-        count: 14,
-        children : {
-            shape: 'circle',
-            fill: {'grey':'red'},
-            strokeWidth: { 1: 0},
-            angle: { 360: 0},
-            radius: { 30 : 5 },
-            duration: 1000
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-        });
-
-        const check = document.querySelector('label');
-        let checked = check.checked;
-
-        function heartBurst(e) {
-        if (!checked) {
-            const pos = this.getBoundingClientRect();
             
-            const timeline = new mojs.Timeline({ speed: 1.5 });
-            
-            timeline.add(burst);
-            
-            burst.tune({
-            'left': '50%',
-            'top': '50%'
-            });
-            timeline.play();
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+            }
         }
-        checked = !checked;
-        } 
-        check.addEventListener('click', heartBurst);
     </script>
 </body>
 </html>
