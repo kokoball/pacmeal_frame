@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/main_content.css" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Time Sale Page</title>
+</head>
+<body>
+    <div id="wrap">
+		<!-- Toolbar -->
+        <section id="toolbar">
+            <div class="TS-close-1"><img src="images/icon/arrow-left.svg"></div>
+            <div class="TS-close-2">오늘의 타임할인</div>
+            <div class="TS-close-2"></div>
+        </section>
+
+        <!-- Time Sale Menu  -->
+        <section id="time-sale-menu">
+            <div class="title">
+                <p class="t1">광주전체</p>
+                <div>
+                    <p class="t2">최신순</p>
+                    <img src="images/icon/bottom_arrow.svg">
+                </div>
+            </div>
+            <div class="TS-content">
+                <div class="content">
+                    <div><img src="images/gray_box.png"></div>
+                    <div>
+                        <p>메뉴명_1</p>
+                        <p>서브 텍스트_1</p>
+                        <p>1km · 한식 육류, 고기요리</p>
+                        <div class="tab-1-c">
+                            <p>50%</p>
+                            <p>7,000원</p>
+                        </div>
+                        <p>매장식사, 포장주문</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div><img src="images/gray_box.png"></div>
+                    <div>
+                        <p>메뉴명_1</p>
+                        <p>서브 텍스트_1</p>
+                        <p>1km · 한식 육류, 고기요리</p>
+                        <div class="tab-1-c">
+                            <p>50%</p>
+                            <p>7,000원</p>
+                        </div>
+                        <p>매장식사, 포장주문</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div><img src="images/gray_box.png"></div>
+                    <div>
+                        <p>메뉴명_1</p>
+                        <p>서브 텍스트_1</p>
+                        <p>1km · 한식 육류, 고기요리</p>
+                        <div class="tab-1-c">
+                            <p>50%</p>
+                            <p>7,000원</p>
+                        </div>
+                        <p>매장식사, 포장주문</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div><img src="images/gray_box.png"></div>
+                    <div>
+                        <p>메뉴명_1</p>
+                        <p>서브 텍스트_1</p>
+                        <p>1km · 한식 육류, 고기요리</p>
+                        <div class="tab-1-c">
+                            <p>50%</p>
+                            <p>7,000원</p>
+                        </div>
+                        <p>매장식사, 포장주문</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div><img src="images/gray_box.png"></div>
+                    <div>
+                        <p>메뉴명_1</p>
+                        <p>서브 텍스트_1</p>
+                        <p>1km · 한식 육류, 고기요리</p>
+                        <div class="tab-1-c">
+                            <p>50%</p>
+                            <p>7,000원</p>
+                        </div>
+                        <p>매장식사, 포장주문</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+            <div><img src="images/icon/home_icon.svg"><div>홈</div></div>
+            <div><img src="images/icon/map_icon.svg"><div>내 주변</div></div>
+            <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
+            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+        </div>
+	</div>
+
+    <!-- Scripts -->
+    <script>
+        $('.tab-link').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tab-link').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+    });
+    </script>
+</body>
+</html>

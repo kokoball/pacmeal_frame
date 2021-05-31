@@ -153,6 +153,18 @@
 #time-sale .title {
   display: flex;
 }
+#time-sale a {
+  text-decoration: none;
+}
+#time-sale a:link {
+  color: red;
+  text-decoration: none;
+}
+#time-sale a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 #time-sale .title :nth-child(1) {
   flex: 1;
   float: left;
