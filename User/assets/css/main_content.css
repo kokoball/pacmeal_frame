@@ -450,3 +450,41 @@
 .show {
   display: block;
 }
+
+/* Search Page */
+#recent-searches .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#recent-searches .title > :nth-child(1) {
+  display: inline-block;
+  margin: 0;
+  padding: 3%;
+  font-size: 80%;
+  color: #777777;
+}
+#recent-searches .title > :nth-child(2) {
+  display: inline-block;
+  margin: 0;
+  padding: 3%;
+  font-size: 70%;
+  color: #777777;
+}
+#recent-searches .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#recent-searches .content > :nth-child(1) {
+  display: inline-block;
+  margin: 0;
+  padding: 3%;
+}
+#recent-searches .content > :nth-child(2) {
+  display: inline-block;
+  margin: 0;
+  padding: 3%;
+}
