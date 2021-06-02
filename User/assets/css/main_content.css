@@ -463,6 +463,16 @@
   display: block;
 }
 
+/* 사진 모서리 */
+#time-sale-menu > .TS-content .content :nth-child(1) {
+  border-radius: 10%;
+}
+#time-sale-menu > .TS-content .content :nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Search Page */
 #recent-searches .title {
   display: flex;

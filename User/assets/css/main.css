@@ -354,6 +354,17 @@
 #near-shop .slide-text :nth-child(2) {
   font-size: 50%;
 }
+#near-shop a {
+  text-decoration: none;
+}
+#near-shop a:link {
+  color: red;
+  text-decoration: none;
+}
+#near-shop a:visited {
+  color: black;
+  text-decoration: none;
+}
 
 /* Bottom Menu Bar */
 #bottom-menu {

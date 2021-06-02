@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/main_content.css" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Near Shop Page</title>
+</head>
+<body>
+    <div id="wrap">
+		<!-- Toolbar -->
+        <section id="toolbar">
+            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+            <div class="TS-close-2">내 주변 맛집</div>
+            <div class="TS-close-2"></div>
+        </section>
+
+
+
+        
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
+            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
+            <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
+            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+        </div>
+	</div>
+
+    <!-- Drop Down Scripts-->
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+            
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+            }
+        }
+    </script>
+</body>
+</html>
