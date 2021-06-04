@@ -1,107 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
-	<link rel="stylesheet" href="assets/css/main_content.css" />
-
-    <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>My Page</title>
+	<link rel="stylesheet" href="assets/css/my_page.css" />
+  <title>My Page</title>
 </head>
 <body>
-    <div id="wrap">
-		<!-- Toolbar -->
-        <section id="toolbar">
-            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
-            <div class="TS-close-2">회원가입</div>
-            <div class="TS-close-2"></div>
-        </section>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+        <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+        <div class="TS-close-2">나의 팩밀</div>
+        <div class="TS-close-2"></div>
+    </section>
 
-        <!-- Sing Up Content -->
-        <section id="SU-content">
-            <div class="container">
-                <div class="input-form-backgroud row">
-                  <div class="input-form col-md-12 mx-auto">
-                    <form class="validation-form" novalidate>
-                      <div class="row">
-                        <div class="col-md-6 mb-3">
-                          <label for="name">사용자 ID</label>
-                          <input type="text" class="form-control" id="name" placeholder="" value="" required>
-                          <div class="invalid-feedback">
-                            사용자 ID를 입력해주세요.
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="name">비밀번호 입력</label>
-                            <input type="password" class="form-control" id="password" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                              비밀번호를 입력해주세요.
-                            </div>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                            <label for="name">비밀번호 확인</label>
-                            <input type="password" class="form-control" id="passwordcheck" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                              비밀번호를 확인해주세요.
-                            </div>
-                          </div>
-                        <div class="col-md-6 mb-3">
-                          <label for="nickname">닉네임</label>
-                          <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                          <div class="invalid-feedback">
-                            닉네임을 입력해주세요.
-                          </div>
-                        </div>
-                      </div>
-            
-                      <div class="mb-3">
-                        <label for="email">이메일</label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                        <div class="invalid-feedback">
-                          이메일을 입력해주세요.
-                        </div>
-                      </div>
-                      <hr class="mb-4">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="aggrement" required>
-                        <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
-                      </div>
-                      <div class="mb-4"></div>
-                      <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-        </section>
-        
+    <!-- Not Logged In Content -->    
+    <section id= NL-content>
+      <div class="content">
+        <img src="images/icon/lock.svg">
+        <h3>로그인이 필요한 페이지 입니다.</h3>
+        <a href="my_Page_2.html"><button>로그인하기</button></a>
+      </div>
 
-        
+    </section>
 
-        <!-- Bottom Menu Bar -->
-        <div id="bottom-menu">
-            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
-            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
-            <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
-            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
-        </div>
+
+
+          
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-menu">
+        <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
+        <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
+        <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
+        <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+    </div>
 	</div>
-    <script>
-        window.addEventListener('load', () => {
-          const forms = document.getElementsByClassName('validation-form');
-    
-          Array.prototype.filter.call(forms, (form) => {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-    
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      </script>
 </body>
 </html>
