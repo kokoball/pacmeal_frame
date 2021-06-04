@@ -9,6 +9,13 @@
   margin-bottom: 5rem;
   /* border: 4px solid #000; */
 }
+body {
+  min-width: 320px;
+  max-width: 680px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 15px 15px 60px 15px;
+}
 
 /* toolbar */
 #toolbar {
@@ -131,7 +138,7 @@
   flex: 3.5;
   padding: 3%;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .tab-content.current .content :nth-child(2) p {
   all: unset;
@@ -139,17 +146,17 @@
   padding: 1%;
 }
 .tab-content.current .content :nth-child(2) > :nth-child(1) {
-  font-size: 80%;
+  font-size: 1em;
   font-weight: bold;
 }
 .tab-content.current .content :nth-child(2) > :nth-child(2) {
-  font-size: 50%;
+  font-size: 0.8em;
 }
 .tab-content.current .content :nth-child(2) > :nth-child(3) {
-  font-size: 50%;
+  font-size: 0.8em;
 }
 .tab-content.current .content :nth-child(2) > :nth-child(5) {
-  font-size: 50%;
+  font-size: 0.8em;
 }
 
 .tab-content.current .content :nth-child(2) div {
@@ -297,6 +304,9 @@
   height: 4rem;
   z-index: 999;
   display: flex;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 0 auto;
 }
 #bottom-menu a {
   text-decoration: none;
@@ -466,6 +476,7 @@
 /* 사진 모서리 */
 #time-sale-menu > .TS-content .content :nth-child(1) {
   border-radius: 10%;
+  /* overflow: hidden; tab-1-c 줄 안 맞음 */
 }
 #time-sale-menu > .TS-content .content :nth-child(1) > img {
   width: 100%;
