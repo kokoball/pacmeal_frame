@@ -14,85 +14,42 @@ body {
   max-width: 680px;
   min-height: 100%;
   margin: 0 auto;
-  padding: 15px 15px 60px 15px;
 }
 
-/* toolbar */
-#toolbar {
-  background: white;
+/* Search Page */
+#banner {
+  background-color: #c4c4c4;
   width: 100%;
-  height: 50px;
-  display: flex;
-  border-bottom: solid 2px #e1e1e1;
+  height: 27vh;
+  min-height: 180px;
 }
-#toolbar div {
-  flex: 1;
-  margin-bottom: 0px;
-  display: inline;
+#banner > img:nth-child(1) {
+  margin: 3%;
+  float: left;
 }
-#toolbar .RS-close {
-  width: 100%;
-  height: 100%;
-  flex: 1;
-  min-width: 24px;
-  min-height: 24px;
-  font-size: 15px;
-  padding: 0 5% 0 5%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: none;
-  outline: none;
-}
-#toolbar .SP-search {
-  width: 100%;
-  height: 100%;
-  flex: 8;
-  min-width: 24px;
-  min-height: 24px;
-  font-size: 15px;
-  padding: 0 5% 0 5%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: none;
-  outline: none;
-}
-#toolbar .RS-close img {
-  align-items: center;
-}
-#toolbar .TS-close-1 {
-  min-width: 24px;
-  min-height: 24px;
-  transform: translate(0%, 25%);
-}
-#toolbar .TS-close-2 {
-  min-width: 24px;
-  min-height: 24px;
-  font-size: 80%;
-  text-align: center;
-  transform: translate(0%, 30%);
-  font-weight: bold;
-}
-/* Time Sale Page Toolbar */
-#toolbar .toolbar-1 {
-  min-width: 24px;
-  min-height: 24px;
-  text-align: left;
-  transform: translate(0%, 25%);
-}
-#toolbar .toolbar-2 {
-  flex: 3;
-  text-align: center;
-  font-size: 100%;
-  transform: translate(0%, 25%);
+#banner > img:nth-child(2) {
+  margin: 3%;
+  float: right;
 }
 
-/* Bottom Menu Bar */
+/* Tab Menu */
 .allWrap {
   width: 100%;
   margin: 0 auto;
 }
+.allWrap h5 {
+  margin: 0;
+  padding: 5% 5% 0 5%;
+}
+.text-content {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.text-content p {
+  margin: 0;
+}
+
 .tabBox {
   margin: 0 auto;
   display: flex;
@@ -110,9 +67,9 @@ body {
 }
 .tab-link.current {
   background-color: transparent;
-  color: #00d1c4;
+  color: black;
   font-weight: 600;
-  border-bottom: solid 3px #00d1c4;
+  border-bottom: solid 3px black;
 }
 .tab-content {
   display: none;
@@ -194,132 +151,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* heart 겹치기 */
-#tab-1 > div > div:nth-child(1) {
-  z-index: 1;
-  position: relative;
-}
-#tab-1 > div > div:nth-child(1) > :nth-child(2) {
-  z-index: 2;
-  border: none;
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  top: 2.5vh;
-  right: 2.5vw;
-  cursor: pointer;
-  transition: all 0.3s;
-  transform-origin: center;
-}
-
-@media (min-width: 1000px) {
-  #tab-1 > div > div:nth-child(1) > :nth-child(2) {
-    z-index: 2;
-    border: none;
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    top: 2.5vh;
-    right: 1.5vw;
-    cursor: pointer;
-    transition: all 0.3s;
-    transform-origin: center;
-  }
-}
-@media (min-width: 1600px) {
-  #tab-1 > div > div:nth-child(1) > :nth-child(2) {
-    z-index: 2;
-    border: none;
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    top: 2.5vh;
-    right: 1vw;
-    cursor: pointer;
-    transition: all 0.3s;
-    transform-origin: center;
-  }
-}
-
-.active > .like-heart {
-  animation: animateHeart 0.3s linear forwards;
-}
-
-.like-heart .heart-fill {
-  fill: white;
-  opacity: 0;
-}
-
-.like-heart:hover .heart-fill {
-  fill: white;
-}
-
-.like-heart .heart-outline {
-  fill: black;
-}
-
-.active > .like-heart .heart-fill,
-.active > .like-heart .heart-outline {
-  fill: #ff3c49;
-  opacity: 1;
-}
-
-.like-button-btn {
-  display: inline-block;
-  border: 2px solid #ff3c49;
-  border-radius: 5px;
-  background-color: white;
-  font-size: 0;
-}
-
-.like-button {
-  cursor: pointer;
-  padding: 11px;
-  width: 24px;
-  transition: all 0.3s;
-  transform-origin: center;
-}
-
-.like-button:hover {
-  background-color: #ffeaeb;
-}
-
-.active > .like-button {
-  animation: animateHeart 0.3s linear forwards;
-}
-
-.like-button .heart-fill {
-  fill: white;
-}
-
-.like-button:hover .heart-fill {
-  fill: #ffeaeb;
-  transform: scale(1.2);
-}
-.active > .like-button:hover .heart-fill {
-  transform: none;
-}
-
-.like-button .heart-outline {
-  fill: #ff3c49;
-}
-
-.active > .like-button .heart-fill {
-  fill: #ff3c49;
-}
-
-@keyframes animateHeart {
-  0% {
-    transform: scale(0.2);
-  }
-  40% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 /* Bottom Menu Bar */
@@ -549,17 +380,4 @@ body {
   display: inline-block;
   margin: 0;
   padding: 3%;
-}
-
-/* Search Page */
-#banner {
-  background-color: #c4c4c4;
-  width: 100%;
-  min-height: 180px;
-}
-#banner > img:nth-child(1) {
-  float: left;
-}
-#banner > img:nth-child(2) {
-  float: right;
 }
