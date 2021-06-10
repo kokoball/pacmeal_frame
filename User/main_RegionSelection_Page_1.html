@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
 	<link rel="stylesheet" href="assets/css/region_Selection.css" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Region_Selection</title>
 </head>
 <body>
@@ -14,23 +15,33 @@
         </section>
 
         <!-- Region Category -->
-        <section id="nabar">
-            <div class="navbar-primary">
-                <ul class="navbar-primary-menu">
-                    <li>
-                        <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">인기지역</span></a>
-                        <a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">광주</span></a>
-                        <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">서울</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="main-content">
-                <a class="content-label">전체</a>
-                <a class="content-label">동구</a>
-                <a class="content-label">서구</a>
-                <a class="content-label">남구</a>
-                <a class="content-label">북구</a>
-                <a class="content-label">광산구</a>
+        <section id="tab-Menu">
+            <div class="allWrap">    
+                <div class="tabBox">
+                    <p class="tab-link current" data-tab="tab-1">
+                        메뉴
+                    </p>
+                    <p class="tab-link"  data-tab="tab-2">
+                        정보
+                    </p>
+                    <p class="tab-link"  data-tab="tab-3">
+                        리뷰
+                    </p>
+                </div>
+                <div id="tab-1" class="tab-content current">
+                    <div class="content1"><p id="content-p">전체</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><p id="content-p">동구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><p id="content-p">서구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><p id="content-p">남구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><p id="content-p">북구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><p id="content-p">광산구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    d
+                </div>
+                <div id="tab-3" class="tab-content">
+                    z
+                </div>
             </div>
         </section>
 
@@ -41,8 +52,46 @@
             <button>적용</button>
         </div>
 	</div>
-        <!-- Scripts -->
+
+    <!-- Scripts -->
 	<script src="assets/js/regionSP.js"></script>
+    <script>
+        $('.tab-link').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tab-link').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+    });
+    </script>
+    <script>
+        $(function(){
+            $('#content-p').click(function(){
+                if($("#content-img").css("display") == "none"){
+                    $('#content-img').show();
+                }
+                else if($("#content-img").css("display") != "none"){
+                    $('#content-img').hide();
+                }
+            });
+        });
+    </script>
+    <!-- <script>
+        var target = document.getElementById("content-p");
+        var image = document.getElementById("content-img");
+
+        target.addEventListener("click", function() {
+            if(image.style.visibility == "hidden"){
+                image.style.visibility = "visible";
+                }
+                else if(image.style.visibility != "hidden"){
+                    image.style.visibility = "hidden";
+                }
+        })
+    </script> -->
+
 
 </body>
 </html>
