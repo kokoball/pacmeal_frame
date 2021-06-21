@@ -111,12 +111,12 @@ body {
   text-decoration: none;
 }
 #food-kinds a:link {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 #food-kinds a:visited {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 /* food-kinds swiper */
@@ -172,12 +172,12 @@ body {
   text-decoration: none;
 }
 #time-sale a:link {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 #time-sale a:visited {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 #time-sale .title :nth-child(1) {
@@ -371,12 +371,12 @@ body {
   text-decoration: none;
 }
 #near-shop a:link {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 #near-shop a:visited {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 /* Bottom Menu Bar */
@@ -398,12 +398,12 @@ body {
   text-decoration: none;
 }
 #bottom-menu a:link {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 #bottom-menu a:visited {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 #bottom-menu div {
   flex: 1;
