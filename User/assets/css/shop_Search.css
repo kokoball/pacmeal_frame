@@ -148,6 +148,11 @@ body {
   display: block;
   padding: 1%;
 }
+.tab-content.current .content :nth-child(2) a:li {
+  all: unset;
+  display: block;
+  padding: 1%;
+}
 .tab-content.current .content :nth-child(2) a > :nth-child(1) {
   font-size: 1em;
   font-weight: bold;
@@ -161,6 +166,10 @@ body {
 }
 .tab-content.current .content :nth-child(2) a > :nth-child(5) {
   font-size: 0.8em;
+}
+.tab-content.current .content :nth-child(2) a:link {
+  text-decoration: none;
+  color: black;
 }
 
 .tab-content.current .content :nth-child(2) div {
