@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		
+		<title>우리동네전문가</title>
+
+	    	<style>
+				body {
+					height: 100%;
+					margin: 0 auto;
+				}
+		    	
+				ul {
+				    list-style-type: none;
+				    margin: 0;
+				    padding: 0;
+				    overflow: hidden;
+				    background-color: #333;
+				}
+				
+				li {
+				    float: left;
+				}
+				
+				li a, .dropbtn {
+				    display: inline-block;
+				    color: white;
+				    text-align: center;
+				    padding: 14px 16px;
+				    text-decoration: none;
+				}
+				
+				li a:hover, .dropdown:hover .dropbtn {
+				    background-color: grey;
+				}
+				
+				li.dropdown {
+					/* 이거랑 아래 죠거가 핵심이란다 */
+					float: right;
+				    display: inline-block;
+				}
+				
+				.main_footer {
+					position: absolute;
+					bottom: 0;
+					width: 320px;
+					
+						padding: 15px 0;
+						text-align: center;
+						color: white;
+						background:  #333;			
+					}
+				
+				/* 이거다. 이거를 어떻게 해야 한다 대충 맞았다 */
+				.dropdown-content {
+				    display: none;
+				    position: absolute;
+				    /* 드롭다운 박스 색깔 */
+				    background-color: #f9f9f9;
+				    /* 드롭다운 박스 폭 */
+				    min-width: 160px;
+				    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				    /* 이거랑 위에 죠거가 핵심이란다 */
+				    right: 0;
+				}
+				
+				.dropdown-content a {
+				    color: black;
+				    padding: 12px 16px;
+				    text-decoration: none;
+				    display: block;
+				    text-align: left;
+				}
+				
+				.dropdown-content a:hover {background-color: #f1f1f1}
+				
+				.show {display:block;}
+				
+				.main_footer {
+					position: relative;
+					padding-bottom: 0;
+					width: 100%;
+
+					padding: 15px 0;
+					text-align: center;
+					color: white;
+					background: #333;
+				}				
+			</style>
+	
+			<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+			    document.getElementById("myDropdown").classList.toggle("show");
+			}
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+			  if (!e.target.matches('.dropbtn')) {
+			
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    for (var d = 0; d < dropdowns.length; d++) {
+			      var openDropdown = dropdowns[d];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+			</script>
+			
+	</head>
+	
+	<body>
+		<%
+		String userID = null;
+		if (session.getAttribute("userID") != null) {
+			userID = (String) session.getAttribute("userID");
+		}
+		if(userID == null ) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('접속상태가 아닙니다.')");
+			script.println("location.href = 'P_Login.jsp';");
+			script.println("</script>");
+			script.close();
+			return;
+		}
+		boolean emailChecked = new UserDAO().getUserEmailChecked(userID);
+		if(emailChecked == false) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("location.href = 'P_emailSendConfirm.jsp';");
+			script.println("</script>");
+			script.close();
+			return;
+		}
+		%>	
+
+	<%
+	request.setCharacterEncoding("UTF-8");
+	String jadd = "Republic of Korea";
+	String dadd = "Republic of Korea";
+	String bbsLat = "36.2481160095859";
+	String bbsLng = "128.1875077209495";
+	String bbsTitle = "";
+	String scp = "14";
+	
+	if(request.getParameter("jadd") != null) {
+		jadd = request.getParameter("jadd");
+	}
+	if(request.getParameter("dadd") != null) {
+		dadd = request.getParameter("dadd");
+	}
+	if(request.getParameter("bbsLat") != null) {
+		bbsLat = request.getParameter("bbsLat");
+	}
+	if(request.getParameter("bbsLng") != null) {
+		bbsLng = request.getParameter("bbsLng");
+	}
+	if(request.getParameter("bbsTitle") != null) {
+		bbsTitle = request.getParameter("bbsTitle");
+	}
+	if(request.getParameter("scp") != null) {
+		scp = request.getParameter("scp");
+	}
+	%>
+	
+	<div class="head_wrap">
+		<div id="main_header" style="width:100%;height:55px;position:relative;z-index:2;">
+			<ul>
+			  <li><a href="P_Main.jsp">처음으로</a></li>
+			  <li class="dropdown">
+			    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">도구</a>
+				    <div class="dropdown-content" id="myDropdown">
+	<%
+		if(userID == null) {
+	%>
+						<a href="P_Login.jsp">접속하기</a>
+						<a href="P_Join.jsp">회원가입</a>
+	<%
+		} else {
+	%>
+						<a href="logoutAction.jsp">접속종료</a>
+						<a href="P_Myinfo.jsp">내 정보</a>
+	<%
+		}
+	%>
+						<a href="P_Spec.jsp">서비스 소개</a>
+				    </div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+
+		<div class="bonMoon" style="max-width: 320px; min-height: 100%; margin: 0 auto; padding: 15px; position:relative; padding-bottom:55px;">
+	
+			<div class="map_wrap">
+			    <div id="map" style="width:100%;height:350px;position:relative;overflow:hidden;z-index:1;"></div>
+			</div>
+	
+			<div class="main_wrap">
+				<p><em>질문하려는 위치를 지도에서 지정하고,<br>위치적용을 눌러주세요</em></p> 
+		
+				<form id="qform" name="qform" action="P_getMarker.jsp" method="post">
+					지번주소<br><input type="text" name="jadd" value="<%=jadd%>" size=48 readonly><br><br>
+					건물주소&nbsp;<span style="font-size:0.7em;">(건물이 선택되면 주소가 뜹니다.)</span><br><input type="text" name="dadd" value="<%=dadd%>" size=48 readonly><br><br>
+					위도보기<br><input type="text" name="bbsLat" value="<%=bbsLat%>" size=48 readonly><br><br>
+					경도보기<br><input type="text" name="bbsLng" value="<%=bbsLng%>" size=48 readonly><br><br>
+					<input type="text" id=bbsTitle name=bbsTitle value="<%=bbsTitle%>" size=48 readonly style="display: none">
+					<input type="submit" value="위치적용">
+				</form>
+			</div>
+		</div>
+		
+		
+		<div>
+			<p id="jaddt"></p>
+			<p id="daddt"></p>
+			<p id="bbsLatt"></p>
+			<p id="bbsLngt"></p>
+		</div>
+
+
+		<div class="main_footer">
+			&copy; 매운깻잎
+		</div>
+	*
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ee5af55d48b4dd214976e4549a91137&libraries=services"></script>
+		
+		<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(<%=bbsLat%>, <%=bbsLng%>), // 지도의 중심좌표
+		        level: <%=scp%> // 지도의 확대 레벨
+		    };  
+		
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption);
+		
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다 
+		var zoomControl = new kakao.maps.ZoomControl();
+		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+		// 주소-좌표 변환 객체를 생성합니다
+		var geocoder = new kakao.maps.services.Geocoder();
+		
+		var marker = new kakao.maps.Marker(); // 클릭한 위치를 표시할 마커입니다
+		
+		// 지도를 클릭했을 때 클릭 위치 좌표에 대한 주소정보를 표시하도록 이벤트를 등록합니다
+		kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+		    searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
+		
+		    	if (status === kakao.maps.services.Status.OK) {
+			  		var detailAddrJ = !!result[0].address ? '' + result[0].address.address_name: '';
+			
+			        var resultDivaddJ = document.getElementById('jaddt');
+					resultDivaddJ.innerTe 
+					// 마커를 클릭한 위치에 표시합니다 
+				marker.setPosition(mouseEvent.latLng);
+				marker.setMap(map);
+				
+			    // 클릭한 위도, 경도 정보를 가져옵니다 
+			    var latlng = mouseEvent.latLng;
+			
+			    var messagelat = latlng.getLat();
+
+			    var resultDivlat = document.getElementById('bbsLatt');
+			    resultDivlat.innerText = messagelat;
+			
+			    var messagelng = latlng.getLng();    
+			    
+			    var resultDivlng = document.getElementById('bbsLngt');
+			    resultDivlng.innerText = messagelng;
+		    	
+			    $('input[name=jadd]').attr('value',detailAddrJ);   
+			    $('input[name=dadd]').attr('value',detailAddrD);   
+			    $('input[name=bbsLat]').attr('value',messagelat);   
+			    $('input[name=bbsLng]').attr('value',messagelng);
+			    
+		    	}
+		    });
+		});
+	
+		function searchAddrFromCoords(coords, callback) {
+		    geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+		}
+		
+		function searchDetailAddrFromCoords(coords, callback) {
+		    // 좌표로 법정동 상세 주소 정보를 요청합니다
+		    geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+		}
+
+		</script>
+	</body>
+</html>

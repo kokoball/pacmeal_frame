@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>우리동네전문가</title>
+
+	    	<style>
+				body {
+					min-width: 320px;
+					max-width: 680px;
+					min-height: 100%;
+					margin: 0 0 60px 0;
+					padding: 15px;
+				}
+		    	
+				ul {
+				    list-style-type: none;
+				    margin: 0;
+				    padding: 0;
+				    overflow: hidden;
+				    background-color: #333;
+				}
+				
+				li {
+				    float: left;
+				}
+				
+				li a, .dropbtn {
+				    display: inline-block;
+				    color: white;
+				    text-align: center;
+				    padding: 14px 16px;
+				    text-decoration: none;
+				}
+				
+				li a:hover, .dropdown:hover .dropbtn {
+				    background-color: grey;
+				}
+				
+				li.dropdown {
+					/* 이거랑 아래 죠거가 핵심이란다 */
+					float: right;
+				    display: inline-block;
+				}
+				
+				.main_footer {
+					position: fixed;
+
+					bottom: 0;
+					width: 320px;
+					
+						padding: 15px 0;
+						text-align: center;
+						color: white;
+						background:  #333;			
+					}
+				
+				/* 이거다. 이거를 어떻게 해야 한다 대충 맞았다 */
+				.dropdown-content {
+				    display: none;
+				    position: absolute;
+				    /* 드롭다운 박스 색깔 */
+				    background-color: #f9f9f9;
+				    /* 드롭다운 박스 폭 */
+				    min-width: 160px;
+				    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				    /* 이거랑 위에 죠거가 핵심이란다 */
+				    right: 0;
+				}
+				
+				.dropdown-content a {
+				    color: black;
+				    padding: 12px 16px;
+				    text-decoration: none;
+				    display: block;
+				    text-align: left;
+				}
+				
+				.dropdown-content a:hover {background-color: #f1f1f1}
+				
+				.show {display:block;}
+				
+				table {
+					border : 1px solid black;
+					border-collapse : collapse;
+				}
+			</style>
+	
+			<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+			    document.getElementById("myDropdown").classList.toggle("show");
+			}
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+			  if (!e.target.matches('.dropbtn')) {
+			
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    for (var d = 0; d < dropdowns.length; d++) {
+			      var openDropdown = dropdowns[d];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+			</script>
+	</head>
+	
+	<body>
+	<%
+		String userID = null;
+	
+			if (session.getAttribute("userID") != null) {
+		userID = (String) session.getAttribute("userID");
+			}
+			if(userID == null ) {
+				PrintWriter script = response.getWriter();
+				script.println("<script>");
+				script.println("alert('접속상태가 아닙니다.')");
+				script.println("location.href = 'P_Login.jsp';");
+				script.println("</script>");
+				script.close();
+				return;
+			}
+			boolean emailChecked = new UserDAO().getUserEmailChecked(userID);
+			if(emailChecked == false) {
+				PrintWriter script = response.getWriter();
+				script.println("<script>");
+				script.println("location.href = 'P_emailSendConfirm.jsp';");
+				script.println("</script>");
+				script.close();
+				return;
+			}
+			int bbsID = 0;
+			if (request.getParameter("bbsID") != null) {
+
+		bbsID = Integer.parseInt(request.getParameter("bbsID"));
+			}
+			if (bbsID == 0) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('유효하지 않은 글입니다.')");
+		script.println("location.href = 'bbs.jsp'");
+		script.println("</script>");
+			}
+
+		BbsDTO bbs = new BbsDAO().getBbs(bbsID);
+
+		int RLstNumber = 1;
+		if (request.getParameter("RLstNumber") != null) {
+	RLstNumber = Integer.parseInt(request.getParameter("RLstNumber"));
+		}
+		
+		int comID = 0;
+		if (request.getParameter("comID") != null) {
+	bbsID = Integer.parseInt(request.getParameter("comID"));
+		}
+		
+		CommentDTO comment = new CommentDAO().getComment(bbsID);
+		
+	%>
+	
+	<div class="head_wrap">
+		<div id="main_header" style="width:100%;height:55px;position:relative;z-index:2;">
+			<ul>
+			  <li><a href="P_Main.jsp">처음으로</a></li>
+			  <li class="dropdown">
+			    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">도구</a>
+				    <div class="dropdown-content" id="myDropdown">
+	<%
+		if(userID == null) {
+	%>
+						<a href="P_Login.jsp">접속하기</a>
+						<a href="P_Join.jsp">회원가입</a>
+	<%
+		} else {
+	%>
+						<a href="logoutAction.jsp">접속종료</a>
+						<a href="P_Myinfo.jsp">내 정보</a>
+	<%
+		}
+	%>
+						<a href="P_Spec.jsp">서비스 소개</a>
+				    </div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th colspan="3" style="background-color: #eeeeee; text-align: center;">게시판 글 보기</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width: 20%;">글 제목</td>
+						<td colspan="2"><%= bbs.getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>").replaceAll("\\\"", "&quot;") %></td>
+					</tr>
+
+					<tr>
+						<td>위치</td>
+						<td colspan="2"><div id="map" style="width:100%;height:350px;"></div></td>
+					</tr>
+					
+					<tr>
+						<td>작성자</td>
+						<td colspan="2"><%= bbs.getUserID() %></td>
+					</tr>
+					<tr>
+						<td>작성일자</td>
+						<td colspan="2"><%= bbs.getBbsDate().substring(0, 11) + bbs.getBbsDate().substring(11, 13) + "시 " + bbs.getBbsDate().substring(14, 16) + "분 " %></td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td colspan="2" style="min-height: 200px; text-align: left;"><%= bbs.getBbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>").replaceAll("\\\"", "&quot;") %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div><br>
+		
+		<div align="right">
+			<%
+				if(userID != null && userID.equals(bbs.getUserID())) {
+			%>
+		<button type="button" class="btn btn-warning" onclick="location.href='update.jsp?bbsID=<%= bbsID %>'">수정</button>	
+		<button type="button" class="btn btn-warning" onclick="return confirm('정말로 삭제하시겠습니까?'), location.href='deleteAction.jsp?bbsID=<%= bbsID %>'">삭제</button>
+			<%
+				}
+			%>
+		<button type="button" class="btn btn-warning" onclick="location.href='P_viewbbs.jsp'">목록</button>	
+		</div><br>
+		
+		<div class=reple_view>
+			<table border = "1">
+					<%
+						CommentDAO commentDAO = new CommentDAO();
+									ArrayList<CommentDTO> list = commentDAO.getList(RLstNumber, bbsID);
+									for(int k = 0; k < list.size(); k++) {
+					%>
+				<tr>
+				    <td style="min-width:45px; text-align:center;">중단<%= list.get(k).getComDate().substring(0, 11) + bbs.getBbsDate().substring(11, 13) + "시 " + bbs.getBbsDate().substring(14, 16) + "분 " %></td>
+				    <td style="min-width:45px; text-align:center;">하단<%= list.get(k).getComContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>").replaceAll("\\\"", "&quot;") %></td>
+				</tr>
+					<%
+						}
+					%>
+			</table>
+		</div>
+			<%
+				if(commentDAO.nextPage(RLstNumber + 1)) {
+			%>
+				<a href="jojakrepleview.jsp" class="btn btn-success btn-arraw-left">모두보기</a>
+			<%
+				}
+			%>
+		
+		<div class=jojak_view>
+			<table border = "1">
+				<tr>
+					<td style="min-width:45px; text-align:center;">여기는</td>
+				    <td style="min-width:45px; text-align:center;">비교</td>
+				    <td style="min-width:45px; text-align:center;">하자요</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="reple_wrap">
+			<form name="Rfomr" id="Rform" method="post"><br>
+				<input type="submit" value="댓글 등록" formaction="P_Rwriteaction.jsp"><br>
+				글쓴이<br><input type="text" id=userID name=userID value="<%=userID%>" size="49" readonly><br><br>
+				댓글<br><input type="text" id=comContent name=comContent size="49"><br><br>
+				원글<br><input type="text" id=bbsID name=bbsID value="<%=bbsID%>" size="49" readonly> <br><br>	
+			</form>
+		</div>
+	</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<div class="main_footer">
+			&copy; 매운깻잎
+		</div>
+		
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ee5af55d48b4dd214976e4549a91137&libraries=services"></script>
+	
+		<script>
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = {
+	        center: new kakao.maps.LatLng(<%=bbs.getBbsLat()%>, <%=bbs.getBbsLng()%>), // 지도의 중심좌표
+	        level: 2 // 지도의 확대 레벨
+	    };  
+	
+	// 지도를 생성합니다    
+	var map = new kakao.maps.Map(mapContainer, mapOption); 
+	
+	var iwContent = '<div style="width:150px;text-align:center;padding:6px 0;"><%=bbs.getBbsLat()%></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+	    iwPosition = new kakao.maps.LatLng(<%=bbs.getBbsLat()%>, <%=bbs.getBbsLng()%>); //인포윈도우 표시 위치입니다
+
+	// 인포윈도우를 생성하고 지도에 표시합니다
+	var infowindow = new kakao.maps.InfoWindow({
+	    map: map, // 인포윈도우가 표시될 지도
+	    position : iwPosition, 
+	    content : iwContent
+	});
+	    
+	function searchAddrFromCoords(coords, callback) {
+	    geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+	}
+	      
+	// 아래 코드는 인포윈도우를 지도에서 제거합니다
+	// infowindow.close();        
+	</script>
+
+	</body>
+</html>
