@@ -587,3 +587,10 @@ a:visited {
 #banner > img:nth-child(2) {
   float: right;
 }
+
+/* map content */
+#map {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
