@@ -16,6 +16,17 @@ body {
   margin: 0 auto;
   padding: 15px 15px 60px 15px;
 }
+a {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 
 /* toolbar */
 #toolbar {
@@ -145,20 +156,19 @@ body {
   display: block;
   padding: 1%;
 }
-.tab-content.current .content :nth-child(2) > :nth-child(1) {
+.tab-content.current .content :nth-child(2) > a > :nth-child(1) {
   font-size: 1em;
   font-weight: bold;
 }
-.tab-content.current .content :nth-child(2) > :nth-child(2) {
+.tab-content.current .content :nth-child(2) > a > :nth-child(2) {
   font-size: 0.8em;
 }
-.tab-content.current .content :nth-child(2) > :nth-child(3) {
+.tab-content.current .content :nth-child(2) > a > :nth-child(3) {
   font-size: 0.8em;
 }
-.tab-content.current .content :nth-child(2) > :nth-child(5) {
+.tab-content.current .content :nth-child(2) > a > :nth-child(5) {
   font-size: 0.8em;
 }
-
 .tab-content.current .content :nth-child(2) div {
   display: block;
 }
@@ -190,10 +200,15 @@ body {
   border-radius: 10%;
   overflow: hidden;
 }
-.tab-content.current .content :nth-child(1) > img {
+.tab-content.current .content :nth-child(1) > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* a tag 추가 */
+#tab-1 > div > div:nth-child(1) > a {
+  display: inline-block;
 }
 
 /* heart 겹치기 */
