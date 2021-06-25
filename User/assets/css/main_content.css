@@ -210,6 +210,15 @@ a:visited {
 #tab-1 > div > div:nth-child(1) > a {
   display: inline-block;
 }
+#tab-1 > div > div:nth-child(2) > a {
+  display: inline-block;
+}
+#tab-2 > div > div:nth-child(1) > a {
+  display: inline-block;
+}
+#tab-2 > div > div:nth-child(2) > a {
+  display: inline-block;
+}
 
 /* heart 겹치기 */
 #tab-1 > div > div:nth-child(1) {
