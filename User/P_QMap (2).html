@@ -127,7 +127,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('접속상태가 아닙니다.')");
-			script.println("location.href = 'P_Login.jsp';");
+			script.println("location.href = 'P_Login.html';");
 			script.println("</script>");
 			script.close();
 			return;
@@ -136,7 +136,7 @@
 		if(emailChecked == false) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("location.href = 'P_emailSendConfirm.jsp';");
+			script.println("location.href = 'P_emailSendConfirm.html';");
 			script.println("</script>");
 			script.close();
 			return;
@@ -175,24 +175,24 @@
 	<div class="head_wrap">
 		<div id="main_header" style="width:100%;height:55px;position:relative;z-index:2;">
 			<ul>
-			  <li><a href="P_Main.jsp">처음으로</a></li>
+			  <li><a href="P_Main.html">처음으로</a></li>
 			  <li class="dropdown">
 			    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">도구</a>
 				    <div class="dropdown-content" id="myDropdown">
 	<%
 		if(userID == null) {
 	%>
-						<a href="P_Login.jsp">접속하기</a>
-						<a href="P_Join.jsp">회원가입</a>
+						<a href="P_Login.html">접속하기</a>
+						<a href="P_Join.html">회원가입</a>
 	<%
 		} else {
 	%>
-						<a href="logoutAction.jsp">접속종료</a>
-						<a href="P_Myinfo.jsp">내 정보</a>
+						<a href="logoutAction.html">접속종료</a>
+						<a href="P_Myinfo.html">내 정보</a>
 	<%
 		}
 	%>
-						<a href="P_Spec.jsp">서비스 소개</a>
+						<a href="P_Spec.html">서비스 소개</a>
 				    </div>
 			  </li>
 			</ul>
@@ -208,7 +208,7 @@
 			<div class="main_wrap">
 				<p><em>질문하려는 위치를 지도에서 지정하고,<br>위치적용을 눌러주세요</em></p> 
 		
-				<form id="qform" name="qform" action="P_getMarker.jsp" method="post">
+				<form id="qform" name="qform" action="P_getMarker.html" method="post">
 					지번주소<br><input type="text" name="jadd" value="<%=jadd%>" size=48 readonly><br><br>
 					건물주소&nbsp;<span style="font-size:0.7em;">(건물이 선택되면 주소가 뜹니다.)</span><br><input type="text" name="dadd" value="<%=dadd%>" size=48 readonly><br><br>
 					위도보기<br><input type="text" name="bbsLat" value="<%=bbsLat%>" size=48 readonly><br><br>

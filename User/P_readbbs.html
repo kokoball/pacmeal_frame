@@ -123,7 +123,7 @@
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("alert('접속상태가 아닙니다.')");
-				script.println("location.href = 'P_Login.jsp';");
+				script.println("location.href = 'P_Login.html';");
 				script.println("</script>");
 				script.close();
 				return;
@@ -132,7 +132,7 @@
 			if(emailChecked == false) {
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("location.href = 'P_emailSendConfirm.jsp';");
+				script.println("location.href = 'P_emailSendConfirm.html';");
 				script.println("</script>");
 				script.close();
 				return;
@@ -146,7 +146,7 @@
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('유효하지 않은 글입니다.')");
-		script.println("location.href = 'bbs.jsp'");
+		script.println("location.href = 'bbs.html'");
 		script.println("</script>");
 			}
 
@@ -169,24 +169,24 @@
 	<div class="head_wrap">
 		<div id="main_header" style="width:100%;height:55px;position:relative;z-index:2;">
 			<ul>
-			  <li><a href="P_Main.jsp">처음으로</a></li>
+			  <li><a href="P_Main.html">처음으로</a></li>
 			  <li class="dropdown">
 			    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">도구</a>
 				    <div class="dropdown-content" id="myDropdown">
 	<%
 		if(userID == null) {
 	%>
-						<a href="P_Login.jsp">접속하기</a>
-						<a href="P_Join.jsp">회원가입</a>
+						<a href="P_Login.html">접속하기</a>
+						<a href="P_Join.html">회원가입</a>
 	<%
 		} else {
 	%>
-						<a href="logoutAction.jsp">접속종료</a>
-						<a href="P_Myinfo.jsp">내 정보</a>
+						<a href="logoutAction.html">접속종료</a>
+						<a href="P_Myinfo.html">내 정보</a>
 	<%
 		}
 	%>
-						<a href="P_Spec.jsp">서비스 소개</a>
+						<a href="P_Spec.html">서비스 소개</a>
 				    </div>
 			  </li>
 			</ul>
@@ -232,12 +232,12 @@
 			<%
 				if(userID != null && userID.equals(bbs.getUserID())) {
 			%>
-		<button type="button" class="btn btn-warning" onclick="location.href='update.jsp?bbsID=<%= bbsID %>'">수정</button>	
-		<button type="button" class="btn btn-warning" onclick="return confirm('정말로 삭제하시겠습니까?'), location.href='deleteAction.jsp?bbsID=<%= bbsID %>'">삭제</button>
+		<button type="button" class="btn btn-warning" onclick="location.href='update.html?bbsID=<%= bbsID %>'">수정</button>	
+		<button type="button" class="btn btn-warning" onclick="return confirm('정말로 삭제하시겠습니까?'), location.href='deleteAction.html?bbsID=<%= bbsID %>'">삭제</button>
 			<%
 				}
 			%>
-		<button type="button" class="btn btn-warning" onclick="location.href='P_viewbbs.jsp'">목록</button>	
+		<button type="button" class="btn btn-warning" onclick="location.href='P_viewbbs.html'">목록</button>	
 		</div><br>
 		
 		<div class=reple_view>
@@ -259,7 +259,7 @@
 			<%
 				if(commentDAO.nextPage(RLstNumber + 1)) {
 			%>
-				<a href="jojakrepleview.jsp" class="btn btn-success btn-arraw-left">모두보기</a>
+				<a href="jojakrepleview.html" class="btn btn-success btn-arraw-left">모두보기</a>
 			<%
 				}
 			%>
@@ -276,7 +276,7 @@
 		
 		<div class="reple_wrap">
 			<form name="Rfomr" id="Rform" method="post"><br>
-				<input type="submit" value="댓글 등록" formaction="P_Rwriteaction.jsp"><br>
+				<input type="submit" value="댓글 등록" formaction="P_Rwriteaction.html"><br>
 				글쓴이<br><input type="text" id=userID name=userID value="<%=userID%>" size="49" readonly><br><br>
 				댓글<br><input type="text" id=comContent name=comContent size="49"><br><br>
 				원글<br><input type="text" id=bbsID name=bbsID value="<%=bbsID%>" size="49" readonly> <br><br>	

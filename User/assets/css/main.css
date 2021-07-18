@@ -199,6 +199,7 @@ body {
 #time-sale .title :nth-child(2) img {
   float: right;
 }
+
 /* Time Sale Swiper */
 #time-sale .swiper-wrapper {
   width: 50%;
@@ -244,6 +245,8 @@ body {
 #time-sale .swiper-slide .silde-img img {
   width: 100%;
   height: 100%;
+  min-width: 107px;
+  min-height: 107px;
   object-fit: cover;
 }
 #time-sale .slide-text {

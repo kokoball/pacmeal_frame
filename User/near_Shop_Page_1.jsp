@@ -14,7 +14,7 @@
     <div id="wrap">
 		<!-- Toolbar -->
         <section id="toolbar">
-            <div class="TS-close-1"><a href="main_Page_1.jsp"><img src="images/icon/arrow-left.svg"></a></div>
+            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
             <div class="TS-close-2">내 주변 맛집</div>
             <div class="TS-close-2"></div>
         </section>
@@ -29,10 +29,10 @@
 
         <!-- Bottom Menu Bar -->
         <div id="bottom-menu">
-            <div><a href="main_Page_1.jsp"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
-            <div><a href="near_Shop_Page_1.jsp"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
+            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
+            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
             <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
-            <div><a href="my_Page_1.jsp"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
         </div>
 	</div>
 
