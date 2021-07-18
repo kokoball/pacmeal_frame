@@ -173,13 +173,18 @@ a:visited {
 }
 
 @media (min-width: 600px) {
-  /* ipad */
   #tab-1 > .content > .content-1 > .like-heart-btn > .like-heart {
     flex: 3.5;
     padding: 3%;
     padding-top: 33%;
     width: 100%;
     height: auto;
+  }
+  /* p tag 글자 크기 조절*/
+  #tab-1 > .content > .content-2 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 120%;
   }
 }
 .tab-content.current .content :nth-child(2) p {
