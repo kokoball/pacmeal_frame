@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/my_page.css" />  
+  <title>My Page</title>
+</head>
+<body>
+    <div id="wrap">
+		<!-- Toolbar -->
+        <section id="toolbar">
+            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+            <div class="TS-close-2">회원가입</div>
+            <div class="TS-close-2"></div>
+        </section>
+
+        <section id=WP-content>
+          <div class="content">
+            <h3>환영합니다!</h3>
+            <h6>회원가입이 완료되었습니다.</h6>
+            <h6>지금 바로 내주변 매장에서 주문을 해보세요.</h6>
+            <a href="my_Page_2.html"><button>시작하기</button></a>
+          </div>
+        </section>
+        
+
+        
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
+            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
+            <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
+            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+        </div>
+	</div>
+    <script>
+        window.addEventListener('load', () => {
+          const forms = document.getElementsByClassName('validation-form');
+    
+          Array.prototype.filter.call(forms, (form) => {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+    
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      </script>
+</body>
+</html>
