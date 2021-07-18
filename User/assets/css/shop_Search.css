@@ -461,3 +461,50 @@ body {
   margin: 5%;
   height: 45px;
 }
+
+/* Shop Search media queri */
+@media (min-width: 414px) {
+  h3 {
+    font-size: 110%;
+  }
+  h5 {
+    font-size: 110%;
+  }
+  .text-content p {
+    font-size: 100%;
+  }
+  #tab-1 > .content > .content-1 p {
+    line-height: 1.5;
+    padding: auto;
+    font-size: 110%;
+  }
+}
+@media (min-width: 500px) {
+  h3 {
+    font-size: 135%;
+  }
+  h5 {
+    font-size: 120%;
+  }
+  .text-content p {
+    font-size: 115%;
+  }
+  #tab-1 > .content > .content-1 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 120%;
+  }
+}
+@media (min-width: 600px) {
+  h3 {
+    font-size: 150%;
+  }
+  h5 {
+    font-size: 130%;
+  }
+  #tab-1 > .content > .content-1 p {
+    line-height: 1.7;
+    padding: auto;
+    font-size: 140%;
+  }
+}
