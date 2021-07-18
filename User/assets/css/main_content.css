@@ -151,6 +151,37 @@ a:visited {
   width: 100%;
   height: auto;
 }
+@media (min-width: 414px) {
+  /* ipad */
+  #tab-1 > .content > .content-1 > .like-heart-btn > .like-heart {
+    flex: 3.5;
+    padding: 3%;
+    padding-top: 6%;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 515px) {
+  /* ipad */
+  #tab-1 > .content > .content-1 > .like-heart-btn > .like-heart {
+    flex: 3.5;
+    padding: 12%;
+    padding-top: 16%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  /* ipad */
+  #tab-1 > .content > .content-1 > .like-heart-btn > .like-heart {
+    flex: 3.5;
+    padding: 3%;
+    padding-top: 33%;
+    width: 100%;
+    height: auto;
+  }
+}
 .tab-content.current .content :nth-child(2) p {
   all: unset;
   display: block;
