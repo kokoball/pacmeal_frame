@@ -186,6 +186,11 @@ a:visited {
     padding: auto;
     font-size: 120%;
   }
+  #tab-2 > .content > .content-2 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 120%;
+  }
 }
 .tab-content.current .content :nth-child(2) p {
   all: unset;
