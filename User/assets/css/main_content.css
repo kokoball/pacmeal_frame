@@ -171,6 +171,31 @@ a:visited {
     height: auto;
   }
 }
+/* time sale content2 p tag 크기 */
+@media (min-width: 414px) {
+  #tab-1 > .content > .content-2 p {
+    line-height: 1.4;
+    padding: auto;
+    font-size: 90%;
+  }
+  #tab-2 > .content > .content-2 p {
+    line-height: 1.4;
+    padding: auto;
+    font-size: 90%;
+  }
+}
+@media (min-width: 500px) {
+  #tab-1 > .content > .content-2 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 100%;
+  }
+  #tab-2 > .content > .content-2 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 100%;
+  }
+}
 
 @media (min-width: 600px) {
   #tab-1 > .content > .content-1 > .like-heart-btn > .like-heart {
@@ -512,6 +537,33 @@ a:visited {
 #time-sale-menu .content :nth-child(2) .tab-2-c > :nth-child(3) {
   color: #dddddd;
   font-size: 70%;
+}
+
+/* time sale content2 p tag 크기 */
+@media (min-width: 375px) {
+  #time-sale-menu > .TS-content .content .content-2 p {
+    line-height: 1.5;
+    padding: auto;
+    font-size: 90%;
+  }
+}
+@media (min-width: 475px) {
+  #time-sale-menu > .TS-content .content .content-2 p {
+    line-height: 1.6;
+    padding: auto;
+    font-size: 100%;
+  }
+}
+@media (min-width: 600px) {
+  /* p tag 글자 크기 조절*/
+  #time-sale-menu > .TS-content .content .content-2 {
+    padding-top: 5%;
+  }
+  #time-sale-menu > .TS-content .content .content-2 p {
+    line-height: 1.7;
+    padding: auto;
+    font-size: 120%;
+  }
 }
 
 /* Drop Down */
