@@ -1,102 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/my_page.css" />
   <title>My Page</title>
 </head>
+
 <body>
   <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar" style="border-bottom: none;">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2"></div>
+      <div class="TS-close-2"></div>
+    </section>
+    <section id="boss-text">
+      <h3>사장님용 로그인</h3>
+    </section>
 
-
-    <section id="SU-content">
+    <!--  Login Content -->
+    <section id=Lg-content style="height: 55vh;">
       <div class="container">
-          <div class="input-form-backgroud row">
-            <div class="input-form col-md-12 mx-auto">
-              <form class="validation-form" novalidate>
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <label for="name">아이디(이메일)</label>
-                    <input type="text" class="form-control" id="name" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      아이디(이메일)를 입력해주세요.
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="name">비밀번호 입력</label>
-                      <input type="password" class="form-control" id="password" placeholder="" value="" required>
-                      <div class="invalid-feedback">
-                        비밀번호를 입력해주세요.
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                      <label for="name">비밀번호 확인</label>
-                      <input type="password" class="form-control" id="passwordcheck" placeholder="" value="" required>
-                      <div class="invalid-feedback">
-                        비밀번호를 확인해주세요.
-                      </div>
-                    </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="nickname">사진</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      사진을 입력해주세요.
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="nickname">분류</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      분류을 입력해주세요.
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="nickname">담당자 이름</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      담당자 이름을 입력해주세요.
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="nickname">연락처 1-무선</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      연락처 1-무선을 입력해주세요.
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="nickname">연락처 2-무선</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      연락처 2-무선을 입력해주세요.
-                    </div>
-                  </div>
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <div class="panel panel-success">
+            <div class="panel-body">
+              <form id="login-form">
+                <div> <!-- button type submit -> button 으로 변경 -->
+                  <button type="button" class="form-control btn btn-primary"
+                    onClick="location.href='res_Page_2.html'">이메일 로그인</button>
                 </div>
-      
-                
-                <hr class="mb-4">
-                
-                <div class="mb-4"></div>
-                <button class="btn btn-primary btn-lg btn-block" type="submit">인증</button>
+                <div>
+                  <button type="submit" class="form-control btn btn-primary"
+                    style="background: url( 'images/icon/btn_kakao.svg' ) no-repeat center; background-size: cover;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                </div>
+                <div>
+                  <button type="submit" class="form-control btn btn-primary"
+                    style="background: url( 'images/icon/btn_apple.svg' ) no-repeat center; background-size: cover;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                </div>
               </form>
             </div>
           </div>
         </div>
-  </section>
+        <div class="content">
+          <div><a href="res_Page_3.html">회원가입</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a>비밀번호 찾기</a></div>
+        </div>
+      </div>
+
+    </section>
 
 
 
-          
 
-    <!-- Bottom Menu Bar -->
-    <div id="bottom-menu">
-        <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
-        <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
-        <div><img src="images/icon/order_icon.svg"><div>주문내역</div></div>
-        <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
-    </div>
-	</div>
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+          <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg">
+              <div>홈</div>
+            </a></div>
+          <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg">
+              <div>내 주변</div>
+            </a></div>
+          <div><a href="order_History.html"><img src="images/icon/order_icon.svg">
+              <div>주문내역</div>
+            </a></div>
+          <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg">
+              <div>나의 팩밀</div>
+            </a></div>
+        </div>
+  </div>
 </body>
+
 </html>

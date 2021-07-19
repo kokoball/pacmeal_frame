@@ -253,3 +253,9 @@ body {
   margin: 40% 0;
   text-align: center;
 }
+
+/* res Page 1 */
+#boss-text {
+  text-align: center;
+  margin-top: 20%;
+}
