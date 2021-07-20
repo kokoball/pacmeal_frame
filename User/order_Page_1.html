@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+	<link rel="stylesheet" href="assets/css/order_content.css" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Order Page 1</title>
+</head>
+<body>
+    <div id="wrap">
+		<!-- Toolbar -->
+        <section id="toolbar">
+            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+            <div class="TS-close-2">주문하기</div>
+            <div class="TS-close-2"></div>
+        </section>
+
+        <!-- Shop Food Tab Menu  -->
+        <section id="tab-Menu">
+            <div class="allWrap">     
+                <section class="content first">
+                    <div class="content-1">
+                        <div>총 주문금액</div>
+                        <div style="font-weight:bolder;">9,000원</div>
+                    </div>
+                    <div class="content-2">+ 더 담으러 가기</div>
+                </section>
+                <section class="content second">
+                    <div class="content-1">이용방법</div>
+                    <div class="content-2">
+                        <div>
+                            <label for="huey">방문포장</label>
+                            <input type="radio" id="huey" name="drone" value="huey" checked>
+                        </div>
+                        
+                        <div>
+                            <label for="dewey">매장식사</label>
+                            <input type="radio" id="dewey" name="drone" value="dewey">
+                            
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        
+
+        <!-- Bottom Menu Bar -->
+        <div id="bottom-menu">
+            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg"><div>홈</div></a></div>
+            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg"><div>내 주변</div></a></div>
+            <div><a href="order_History.html"><img src="images/icon/order_icon.svg"><div>주문내역</div></a></div>
+            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
+        </div>
+	</div>
+
+    <!-- Scripts -->
+    <script>
+        $('.tab-link').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tab-link').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+    });
+    </script>
+    <script>
+        const buttons = document.querySelectorAll('.like-heart-btn')
+        for (const button of buttons) {
+            button.addEventListener('click', function(){
+                this.classList.toggle('active');
+            })
+        }
+    </script>
+</body>
+</html>

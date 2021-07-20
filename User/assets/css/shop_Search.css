@@ -37,8 +37,9 @@ body {
 }
 #banner > div {
   margin: 3%;
+  margin-bottom: 0;
   float: right;
-  margin-top: 22vh;
+  margin-top: 18vh;
   min-width: 30px;
   min-height: 30px;
 }
@@ -453,7 +454,7 @@ body {
   padding: 3%;
 }
 
-#tab-Menu > div > button {
+#tab-Menu > div > a > button {
   color: white;
   background-color: black;
   border-radius: 0.5em;
