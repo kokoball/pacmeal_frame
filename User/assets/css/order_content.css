@@ -73,26 +73,63 @@ a:visited {
   color: #00d1c4;
 }
 
-.second .content-1 {
+.content-1 {
   font-weight: bold;
   padding: 3%;
+  margin-bottom: 2%;
 }
 .second .content-2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-}
-.second .content-2 div {
-  text-align: center;
 }
 .second input {
   visibility: hidden;
 }
-.second label {
-  border: 1px solid black;
-  padding: 3%;
-  top: 50%;
-  transform: translateY(-50%);
+.black {
+  color: black;
+  border: 2px solid black;
+}
+.form-chek,
+.form-radio {
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-chek::before,
+.form-radio::before {
+  display: none;
+}
+.form-radio::before {
+  border-radius: 50%;
+}
+.input-chek,
+.input-radio {
+  display: none;
+}
+.input-chek:checked + .form-chek::before,
+.input-radio:checked + .form-radio::before {
+  background: black;
+}
+.input-chek:checked + .form-chek,
+.input-radio:checked + .form-radio {
+  text-align: center;
+  color: black;
+  border: 2px solid black;
+}
+label {
+  width: 90%;
+  text-align: center;
+  border: 2px solid #dddddd;
+  color: #dddddd;
+  font-weight: bolder;
+  padding: 3% 0;
+  margin-bottom: 15%;
+  min-width: 100px;
+  min-height: 35px;
+  border-radius: 0.5em;
+}
+label > div {
+  margin-top: 5%;
 }
 
 /* Bottom Menu Bar */
