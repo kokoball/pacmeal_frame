@@ -131,9 +131,27 @@ label {
 label > div {
   margin-top: 5%;
 }
+.third .content-2 {
+  display: flex;
+  width: 100%;
+}
+.third .content-2 > input {
+  flex: 1;
+  margin: 0 5% 5% 5%;
+  min-height: 45px;
+  border-radius: 0.5em;
+  border: 1px solid #cccccc;
+}
+.third .content-2 > textarea {
+  flex: 1;
+  margin: 0 5% 5% 5%;
+  min-height: 75px;
+  border-radius: 0.5em;
+  border: 1px solid #cccccc;
+}
 
 /* Bottom Menu Bar */
-#bottom-menu {
+#order-menu {
   position: fixed;
   background-color: #fff;
   border-top: solid 2px #e1e1e1;
@@ -147,24 +165,24 @@ label > div {
   max-width: 680px;
   margin: 0 auto;
 }
-#bottom-menu a {
+/* #order-menu a {
   text-decoration: none;
 }
-#bottom-menu a:link {
+#order-menu a:link {
   color: black;
   text-decoration: none;
 }
-#bottom-menu a:visited {
+#order-menu a:visited {
   color: black;
   text-decoration: none;
-}
-#bottom-menu div {
-  flex: 1;
-  justify-content: center;
+} */
+#order-menu button {
+  width: 80%;
+  min-height: 45px;
+  margin: 0 10%;
   align-self: center;
   text-align: center;
-}
-#bottom-menu div div {
-  font-size: 55%;
-  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 0.5em;
 }
