@@ -76,7 +76,6 @@ a:visited {
 .content-1 {
   font-weight: bold;
   padding: 3%;
-  margin-bottom: 2%;
 }
 .second .content-2 {
   display: flex;
@@ -90,33 +89,33 @@ a:visited {
   color: black;
   border: 2px solid black;
 }
-.form-chek,
-.form-radio {
+.second > .content-2 > span > .form-chek,
+.second > .content-2 > span > .form-radio {
   display: inline-block;
   vertical-align: middle;
 }
-.form-chek::before,
-.form-radio::before {
+.second > .content-2 > span > .form-chek::before,
+.second > .content-2 > span > .form-radio::before {
   display: none;
 }
-.form-radio::before {
+.second > .content-2 > span > .form-radio::before {
   border-radius: 50%;
 }
-.input-chek,
-.input-radio {
+.second > .content-2 > span > .input-chek,
+.second > .content-2 > span > .input-radio {
   display: none;
 }
-.input-chek:checked + .form-chek::before,
-.input-radio:checked + .form-radio::before {
+.second > .content-2 > span > .input-chek:checked + .form-chek::before,
+.second > .content-2 > span > .input-radio:checked + .form-radio::before {
   background: black;
 }
-.input-chek:checked + .form-chek,
-.input-radio:checked + .form-radio {
+.second > .content-2 > span > .input-chek:checked + .form-chek,
+.second > .content-2 > span > .input-radio:checked + .form-radio {
   text-align: center;
   color: black;
   border: 2px solid black;
 }
-label {
+.second > .content-2 > span > label {
   width: 90%;
   text-align: center;
   border: 2px solid #dddddd;
@@ -128,7 +127,7 @@ label {
   min-height: 35px;
   border-radius: 0.5em;
 }
-label > div {
+.second > .content-2 > span > label > div {
   margin-top: 5%;
 }
 .third .content-2 {
@@ -148,6 +147,27 @@ label > div {
   min-height: 75px;
   border-radius: 0.5em;
   border: 1px solid #cccccc;
+}
+.fourth .content-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 3% 2% 3%;
+}
+.fourth .content-3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 3% 2% 3%;
+}
+.fifth {
+  padding-bottom: 10rem;
+}
+.fifth .content-2 .payment-method {
+  display: flex;
+  padding: 1% 3%;
+}
+.fifth .content-2 > span > label > div {
+  padding: 0 5%;
+  min-width: 150px;
 }
 
 /* Bottom Menu Bar */
