@@ -54,18 +54,7 @@
 	</div>
 
     <!-- Scripts -->
-	<script src="assets/js/regionSP.js"></script>
-    <script>
-        $('.tab-link').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('.tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-    </script> 
+	<script src="assets/js/regionSP.js"></script> 
     <script>
         $(function(){
             $('#content-p').click(function(){
@@ -78,20 +67,6 @@
             });
         });
     </script>
-    <!-- <script>
-        var target = document.getElementById("content-p");
-        var image = document.getElementById("content-img");
-
-        target.addEventListener("click", function() {
-            if(image.style.visibility == "hidden"){
-                image.style.visibility = "visible";
-                }
-                else if(image.style.visibility != "hidden"){
-                    image.style.visibility = "hidden";
-                }
-        })
-    </script> -->
-
-
+    <script src="/User/assets/js/tablink.js"></script>
 </body>
 </html>

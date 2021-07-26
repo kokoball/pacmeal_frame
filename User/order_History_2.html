@@ -68,17 +68,6 @@
 
     <!-- Scripts -->
     <script>
-        $('.tab-link').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('.tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-    </script>
-    <script>
         const buttons = document.querySelectorAll('.like-heart-btn')
         for (const button of buttons) {
             button.addEventListener('click', function(){
@@ -86,5 +75,6 @@
             })
         }
     </script>
+    <script src="/User/assets/js/tablink.js"></script>
 </body>
 </html>

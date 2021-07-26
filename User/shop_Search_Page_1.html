@@ -85,7 +85,48 @@
                    d
                 </div>
                 <div id="tab-3" class="tab-content">
-                    z
+                    <!-- 리뷰가 없을 경우 -->
+                    <!-- <div class="no-review"> 
+                        <div>
+                            <img src="./images/icon/alert-circle.svg">
+                            <div>주문   내역이 존재하지 않습니다.</div>
+                        </div>
+                    </div> -->
+                    <div class="review-complete">
+                        <div><button>📝리뷰작성하기</button></div>
+                        <div>
+                            <div>사진리뷰만보기
+                                <label class="switch">
+                                    <input id="toggle-button" name="toggle-i" type="checkbox">
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">
+                                    <p class="t2">최신순</p>
+                                    <img class="t3" src="images/icon/bottom_arrow.svg">
+                                </button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="#near"> 최신순</a>
+                                    <a href="#discount">리뷰 많은 순</a>
+                                    <a href="#follower">찜 많은 순</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-div img">
+                            <a href="review_page_1.html">
+                                <div>닉네임1</div>
+                                <img class="toggle-img" src="/User/images/gray_box.png">
+                                <div>냉면 시원해요~</div>
+                            </a>
+                        </div>
+                        <div class="toggle-div text">
+                            <a href="review_page_1.html">
+                                <div>닉네임2</div>
+                                <div>갈비 맛있어요</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,18 +149,9 @@
                 </a></div>
         </div>
 	</div>
-
-    <!-- Scripts -->
-    <script>
-        $('.tab-link').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('.tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-    </script>
+    <!-- script -->
+    <script src="/User/assets/js/tablink.js"></script>
+    <script src="/User/assets/js/dropbox.js"></script>
+    <script src="/User/assets/js/toggle_img.js" defer></script>
 </body>
 </html>

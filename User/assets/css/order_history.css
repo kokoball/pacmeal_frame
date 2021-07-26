@@ -370,3 +370,16 @@ a:visited {
   font-size: 55%;
   font-weight: bold;
 }
+
+/* Review Page */
+.review-content {
+  border-bottom: 1px solid #eeeeee;
+}
+.review-content div {
+  padding: 3% 5%;
+}
+.review-content > img {
+  width: 80%;
+  height: auto;
+  margin: 3% 10%;
+}
