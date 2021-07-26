@@ -1,9 +1,17 @@
 # pacmeal_frame
-
+2021 세대별 맞춤형 예비창업가발굴육성사업
+웹_프로토 타입
 ------
 
 # 학습 자료 / 참고 사이트
+1. swiper API   
+https://swiperjs.com/demos
 
+2. 로컬에서 jsp 환경 구축하기   
+https://myhappyman.tistory.com/m/134
+
+3. js toggle 간단히 구현하기   
+https://goddino.tistory.com/129
 
 ------
 
