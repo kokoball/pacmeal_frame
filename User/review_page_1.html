@@ -36,26 +36,5 @@
             <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg"><div>나의 팩밀</div></a></div>
         </div>
 	</div>
-
-    <!-- Scripts -->
-    <script>
-        $('.tab-link').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('.tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-    </script>
-    <script>
-        const buttons = document.querySelectorAll('.like-heart-btn')
-        for (const button of buttons) {
-            button.addEventListener('click', function(){
-                this.classList.toggle('active');
-            })
-        }
-    </script>
 </body>
 </html>
