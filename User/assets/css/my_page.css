@@ -194,29 +194,57 @@ body {
 }
 
 /* Index Page 1*/
-#index-content {
-  text-align: center;
+#index-content .logo {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  height: auto;
 }
 #index-content .content {
-  margin: 0 auto;
+  width: 100%;
   display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
-#index-content a {
+#index-content > .content > a {
   text-decoration: none;
   flex: 1;
+  color: black;
   justify-content: space-between;
 }
-#index-content a:link {
+#index-content > .content > a:link {
   text-decoration: none;
+  color: black;
 }
-#index-content a:visited {
+#index-content > .content > a:visited {
   text-decoration: none;
+  color: black;
 }
-#index-content .content button {
+#index-content .content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 6%;
+  margin: 4%;
+  border-radius: 0.5em;
+  min-height: 16vh;
+  font-size: 130%;
+  font-weight: bolder;
+}
+#index-content .content div img {
+  max-width: 16px;
+  max-height: 16px;
+  margin: 10px;
+}
+#index-content h3 {
+  margin: 3% 15px;
+}
+#index-content h6 {
+  margin: 3% 15px;
+  color: #cccccc;
+}
+
+/* #index-content .content button {
   all: unset;
   width: 80%;
   color: white;
@@ -226,7 +254,7 @@ body {
   border-color: #00d1c4;
   background-color: #00d1c4;
   margin: 10%;
-}
+} */
 /* My Page 6*/
 #WP-content {
   width: 100%;
