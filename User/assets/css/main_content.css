@@ -158,13 +158,19 @@ a:visited {
   #tab-1 > div > div.content-1 > a > img {
     min-width: 108px;
     min-height: 108px;
-    width: 100%;
-    height: 100%;
+  }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
+    min-width: 108px;
+    min-height: 108px;
   }
 }
 @media (min-width: 320px) {
   /* iPhone 5/SE */
   #tab-1 > div > div.content-1 > a > img {
+    min-width: 108px;
+    min-height: 108px;
+  }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
     min-width: 108px;
     min-height: 108px;
   }
@@ -175,10 +181,18 @@ a:visited {
     min-width: 116px;
     min-height: 116px;
   }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
+    min-width: 116px;
+    min-height: 116px;
+  }
 }
 @media (min-width: 414px) {
   /* iPhone 6/7/8 Plus */
   #tab-1 > div > div.content-1 > a > img {
+    min-width: 130px;
+    min-height: 130px;
+  }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
     min-width: 130px;
     min-height: 130px;
   }
@@ -189,9 +203,17 @@ a:visited {
     min-width: 166px;
     min-height: 166px;
   }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
+    min-width: 166px;
+    min-height: 166px;
+  }
 }
 @media (min-width: 600px) {
   #tab-1 > div > div.content-1 > a > img {
+    min-width: 192px;
+    min-height: 192px;
+  }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
     min-width: 192px;
     min-height: 192px;
   }
@@ -201,6 +223,10 @@ a:visited {
   #tab-1 > div > div.content-1 > a > img {
     min-width: 230px;
     min-height: 230px;
+  }
+  #time-sale-menu > div.TS-content > div > div.content-1 > img {
+    width: 230px;
+    height: 230px;
   }
 }
 /* like heart queri */
@@ -676,8 +702,8 @@ a:visited {
   /* overflow: hidden; tab-1-c 줄 안 맞음 */
 }
 #time-sale-menu > .TS-content .content :nth-child(1) > img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
 }
 

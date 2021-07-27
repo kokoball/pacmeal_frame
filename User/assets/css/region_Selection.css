@@ -105,6 +105,23 @@ body {
   min-height: 130px;
   margin-bottom: 3%;
 }
+/* Region Selection page 1 p tag a tag 수정 */
+#content-p {
+  margin: 3%;
+}
+#tab-1 > a {
+  margin: 0;
+  text-decoration: none;
+}
+#tab-1 > a:link {
+  text-decoration: none;
+  color: black;
+}
+#tab-1 > a:visited {
+  text-decoration: none;
+  color: black;
+}
+/* */
 .tab-content.current .content {
   display: flex;
   width: 100%;

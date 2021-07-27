@@ -58,6 +58,22 @@ body {
   align-items: center;
 }
 
+#toolbar > div.toolbar-text > a {
+  display: flex;
+  text-decoration: none;
+}
+#toolbar > div.toolbar-text > a > span {
+  font-weight: bolder;
+  font-size: 110%;
+}
+#toolbar > div.toolbar-text > a:link {
+  text-decoration: none;
+  color: black;
+}
+#toolbar > div.toolbar-text > a:visited {
+  text-decoration: none;
+  color: black;
+}
 /* banner swiper */
 #banner {
   margin: 10px 0 10px 0;
