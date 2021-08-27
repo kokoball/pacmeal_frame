@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
 	<link rel="stylesheet" href="assets/css/region_Selection.css" />
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+	  src="https://code.jquery.com/jquery-3.6.0.js"
+	  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	  crossorigin="anonymous"></script>
     <title>Region_Selection</title>
 </head>
 <body>
@@ -29,13 +32,12 @@
                     </p>
                 </div>
                 <div id="tab-1" class="tab-content current">
-
-                    <div class="content1"><a><p id="content-p">전체</p></a></div>
-                    <div class="content1"><p id="content-p">동구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
-                    <div class="content1"><p id="content-p">서구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
-                    <div class="content1"><p id="content-p">남구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
-                    <div class="content1"><p id="content-p">북구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
-                    <div class="content1"><p id="content-p">광산구</p><img id="content-img" src="images/icon/chevron-bottom.svg"></div>
+                    <div class="content1"><a href="main_Page_1.jsp?region=광주 전체"><p id="content-p">전 지역</p></a></div>
+					<div class="content1"><a href="main_Page_1.jsp?region=동구"><p id="content-p">동구</p></a></div>
+                    <div class="content1"><a href="main_Page_1.jsp?region=서구"><p id="content-p">서구</p></a></div>
+                    <div class="content1"><a href="main_Page_1.jsp?region=남구"><p id="content-p">남구</p></a></div>
+                    <div class="content1"><a href="main_Page_1.jsp?region=북구"><p id="content-p">북구</p></a></div>
+                    <div class="content1"><a href="main_Page_1.jsp?region=광산구"><p id="content-p">광산구</p></a></div>
                 </div>
                 <div id="tab-2" class="tab-content">
                     d
@@ -68,6 +70,6 @@
             });
         });
     </script>
-    <script src="/User/assets/js/tablink.js"></script>
+    <script src="/pacmeal_frame/User/assets/js/tablink.js"></script>
 </body>
 </html>

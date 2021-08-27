@@ -254,6 +254,15 @@ body {
   margin: 3% 15px;
   color: #cccccc;
 }
+@media (min-width: 768px) {
+  /* ipad */
+  #index-content .content div {
+    padding: 4%;
+  }
+  #index-content h3 {
+    margin: 2% 15px;
+  }
+}
 
 /* #index-content .content button {
   all: unset;
