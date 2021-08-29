@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
 	<link rel="stylesheet" href="assets/css/main_content.css" />
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+	  src="https://code.jquery.com/jquery-3.6.0.js"
+	  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	  crossorigin="anonymous"></script>
     <title>Time Sale Page</title>
 </head>
 <body>
@@ -26,7 +29,8 @@
                         <img class="t3" src="images/icon/bottom_arrow.svg">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#near">가까운 순</a>
+                        <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=최신순&pageNumber=0">최신 순</a>
+                        <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=가격순&pageNumber=0">가격 순</a>
                         <a href="#discount">할인높은 순</a>
                         <a href="#follower">찜 많은 순</a>
                     </div>
@@ -100,6 +104,18 @@
                 </div>
             </div>
         </section>
+        <li>
+	
+            <a>이전</a>
+        
+            </li>
+            <li>
+        
+            <a href= "./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4
+            &searchType=%EC%B5%9C%EC%8B%A0%EC%88%9C
+            &pageNumber=1">다음</a>
+        
+            </li>
 
         
 
@@ -119,6 +135,23 @@
                 </a></div>
         </div>
 	</div>
-    <script src="/User/assets/js/dropbox.js"></script>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
-</html>
+</html>   
