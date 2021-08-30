@@ -758,9 +758,54 @@ a:visited {
   float: right;
 }
 
+/* Near Shop Page 1 */
 /* map content */
 #map {
   width: 100%;
   height: auto;
   min-height: 300px;
+}
+
+#near-shop {
+  position: fixed;
+  
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 30px;
+  height: 120px;
+  z-index: 999;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+#near-shop .flex-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+  border: solid 2px #e1e1e1;
+  border-radius: 1em;
+}
+#near-shop .flex-box > .slide-img{
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  padding: 3%;
+}
+#near-shop .flex-box > .slide-img > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+}
+#near-shop .flex-box .slide-text {
+  flex: 2;
+  width: 100%;
+  height: 100%;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+#near-shop .flex-box .slide-text > p{
+  margin: 3%;
+  font-size: 90%;
 }
