@@ -1,92 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/my_page.css" />  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/my_page.css" />
   <title>My Page</title>
 </head>
-<body>
-    <div id="wrap">
-		<!-- Toolbar -->
-        <section id="toolbar">
-            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
-            <div class="TS-close-2">회원가입</div>
-            <div class="TS-close-2"></div>
-        </section>
 
-        <!-- Sing Up Content -->
-        <section id="SU-content">
-            <div class="container">
-                <div class="input-form-backgroud row">
-                  <div class="input-form col-md-12 mx-auto">
-                    <form class="validation-form" novalidate>
-                      <div class="row">
-                        <div class="col-md-6 mb-3">
-                          <label for="nickname">닉네임</label>
-                          <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-                          <div class="invalid-feedback">
-                            닉네임을 입력해주세요.
-                          </div>
-                        </div>
-                      </div>
-            
-                      <div class="mb-3">
-                        <label for="email">이메일</label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                        <div class="invalid-feedback">
-                          이메일을 입력해주세요.
-                        </div>
-                      </div>
-                      <hr class="mb-4">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="aggrement" required>
-                        <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
-                      </div>
-                      <div class="mb-4"></div>
-                      <button id="join-button" class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
-                    </form>
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar" style="border-bottom: none;">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2">회원가입</div>
+      <div class="TS-close-3"><a href="main_Page_1.html"><img src="images/icon/toolbar-home-button.jpg"></a></div>
+    </section>
+
+    <!-- Sing Up Content -->
+    <section id="SU-content">
+      <div class="container">
+        <div class="input-form-backgroud row">
+          <div class="input-form col-md-12 mx-auto">
+            <form class="validation-form" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="phone-number" style="font-size: 110%; font-weight: bold;">휴대전화</label>
+                  <input type="number" class="form-control" id="phone-number" placeholder="- 제외하고 입력" value="" required>
+                  <div class="invalid-feedback">
+                    휴대전화 번호를 입력해 주세요.
                   </div>
                 </div>
               </div>
-        </section>
-        
+              <div class="mb-3">
+                <label for="certification-number" style="font-size: 110%; font-weight: bold;">인증번호</label>
+                <input type="number" class="form-control" id="certification-number" placeholder="인증번호를 입력해 주세요"
+                  required>
+                <div class="invalid-feedback">
+                  이메일을 입력해 주세요.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="name" style="font-size: 110%; font-weight: bold;">이름</label>
+                <input type="text" class="form-control" id="name" placeholder="이름" required>
+                <div class="invalid-feedback">
+                  이름을 입력해 주세요.
+                </div>
+              </div>
 
-        
+              <div class="mb-3">
+                <label style="font-size: 110%; font-weight: bold;">성별</label>
+                <form class="form-card">
+                  <fieldset class="form-fieldset">
+                    <div class="form-radio form-radio-inline"
+                      style="display: flex;align-items: flex-start;justify-content: space-evenly;">
+                      <label class=" form-radio-label">
+                        <input name=pronoun class="form-radio-field" type="radio" required value="He" />
+                        <i class="form-radio-button"></i>
+                        <span style="font-size: 110%; font-weight: bold;">남자</span>
+                      </label>
+                      <label class="form-radio-label">
+                        <input name=pronoun class="form-radio-field" type="radio" required value="She" />
+                        <i class="form-radio-button"></i>
+                        <span style="font-size: 110%; font-weight: bold;">여자</span>
+                      </label>
+                      <label class="form-radio-label">
+                        <input name=pronoun class="form-radio-field" type="radio" required value="They" />
+                        <i class="form-radio-button"></i>
+                        <span style="font-size: 110%; font-weight: bold;">선택안함</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
 
-        <!-- Bottom Menu Bar -->
-        <div id="bottom-menu">
-          <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg">
-              <div>홈</div>
-            </a></div>
-          <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg">
-              <div>내 주변</div>
-            </a></div>
-          <div><a href="order_History.html"><img src="images/icon/order_icon.svg">
-              <div>주문내역</div>
-            </a></div>
-          <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg">
-              <div>나의 팩밀</div>
-            </a></div>
+              </div>
+
+
+              <div class="mb-3">
+                <label for="name" style="font-size: 110%; font-weight: bold;">생년월일</label>
+                <p>
+                  <label for="date"></label>
+                  <input type="date" value="" style="width: 80%; text-align: center; margin: auto 10%">
+                </p>
+              </div>
+
+              <hr class="mb-4">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="aggrement" required>
+                <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+              </div>
+              <div class="mb-4"></div>
+              <button id="join-button" class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+            </form>
+          </div>
         </div>
-	</div>
-    <script>
-        window.addEventListener('load', () => {
-          const forms = document.getElementsByClassName('validation-form');
-    
-          Array.prototype.filter.call(forms, (form) => {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-    
-              form.classList.add('was-validated');
-            }, false);
-          });
+      </div>
+    </section>
+
+
+
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-menu">
+      <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg">
+          <div>홈</div>
+        </a></div>
+      <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg">
+          <div>내 주변</div>
+        </a></div>
+      <div><a href="order_History.html"><img src="images/icon/order_icon.svg">
+          <div>주문내역</div>
+        </a></div>
+      <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg">
+          <div>나의 팩밀</div>
+        </a></div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const forms = document.getElementsByClassName('validation-form');
+
+      Array.prototype.filter.call(forms, (form) => {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
         }, false);
-      </script>
+      });
+    }, false);
+  </script>
 </body>
+
 </html>

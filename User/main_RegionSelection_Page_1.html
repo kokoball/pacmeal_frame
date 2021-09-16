@@ -1,75 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
-	<link rel="stylesheet" href="assets/css/region_Selection.css" />
-    <script
-	  src="https://code.jquery.com/jquery-3.6.0.js"
-	  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-	  crossorigin="anonymous"></script>
-    <title>Region_Selection</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/region_Selection.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Region_Selection</title>
 </head>
+<style>
+  a {
+    display: contents;
+  }
+
+  a:link {
+    color: black;
+  }
+
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
+
+  p {
+    color: black;
+  }
+
+  #tab-1>.content1 {
+    height: 2.5em;
+  }
+
+  input:checked+label {
+    color: #00D1C4;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    display: none;
+  }
+
+  .expandable {
+    visibility: collapse;
+  }
+
+  #A:checked~* .expandable {
+    visibility: visible;
+  }
+</style>
+
 <body>
-    <div id="wrap">
-		<!-- Toolbar -->
-        <section id="toolbar">
-            <div class="RS-close"><a href="main_Page_1.html"><img src="images/icon/close_icon.svg"></a></div>
-        </section>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="RS-close"><a href="main_Page_1.html"><img src="images/icon/close_icon.svg"></a></div>
+    </section>
 
-        <!-- Region Category -->
-        <section id="tab-Menu">
-            <div class="allWrap">    
-                <div class="tabBox">
-                    <p class="tab-link current" data-tab="tab-1">
-                        광주
-                    </p>
-                    <p class="tab-link"  data-tab="tab-2">
-                        정보
-                    </p>
-                    <p class="tab-link"  data-tab="tab-3">
-                        리뷰
-                    </p>
-                </div>
-                <div id="tab-1" class="tab-content current">
-                    <div class="content1"><a href="main_Page_1.jsp?region=광주 전체"><p id="content-p">전 지역</p></a></div>
-					<div class="content1"><a href="main_Page_1.jsp?region=동구"><p id="content-p">동구</p></a></div>
-                    <div class="content1"><a href="main_Page_1.jsp?region=서구"><p id="content-p">서구</p></a></div>
-                    <div class="content1"><a href="main_Page_1.jsp?region=남구"><p id="content-p">남구</p></a></div>
-                    <div class="content1"><a href="main_Page_1.jsp?region=북구"><p id="content-p">북구</p></a></div>
-                    <div class="content1"><a href="main_Page_1.jsp?region=광산구"><p id="content-p">광산구</p></a></div>
-                </div>
-                <div id="tab-2" class="tab-content">
-                    d
-                </div>
-                <div id="tab-3" class="tab-content">
-                    z
-                </div>
-            </div>
-        </section>
-
-        
-
-        <!-- Bottom Menu Bar -->
-        <div id="bottom-menu">
-            <button>적용</button>
+    <!-- Region Category -->
+    <section id="tab-Menu">
+      <div class="allWrap">
+        <div class="tabBox">
+          <p class="tab-link current" data-tab="tab-1">
+            <span style="display:inline-block; padding-top: 5%;">광주</span>
+          </p>
         </div>
-	</div>
+        <div id="tab-1" class="tab-content current">
+          <div class=" content1">
+            <input type='radio' name='region' value='all' id='A' />
+            <label for='A'>전체</label>
+            <p class="expandable">sss</p>
+            <!-- <img class="expandable" src="images/icon/bottom_arrow.svg" alt=""> -->
+          </div>
+          <div class="content1">
+            <input type='radio' name='region' value='east' id='E' />
+            <label for='E'>동구</label>
+            <img src="images/icon/bottom_arrow.svg" alt="">
+          </div>
+          <div class="content1">
+            <input type='radio' name='region' value='west' id='W' />
+            <label for='W'>서구</label>
+            <img src="images/icon/bottom_arrow.svg" alt="">
+          </div>
+          <div class="content1">
+            <input type='radio' name='region' value='south' id='S' />
+            <label for='S'>남구</label>
+            <img src="images/icon/bottom_arrow.svg" alt="">
+          </div>
+          <div class="content1">
+            <input type='radio' name='region' value='north' id='N' />
+            <label for='N'>북구</label>
+            <img src="images/icon/bottom_arrow.svg" alt="">
+          </div>
+          <div class="content1">
+            <input type='radio' name='region' value='san' id='SAN' />
+            <label for='SAN'>광산구</label>
+            <img src="images/icon/bottom_arrow.svg" alt="">
+          </div>
 
-    <!-- Scripts -->
-	<script src="assets/js/regionSP.js"></script> 
-    <script>
-        $(function(){
-            $('#content-p').click(function(){
-                if($("#content-img").css("display") == "none"){
-                    $('#content-img').show();
-                }
-                else if($("#content-img").css("display") != "none"){
-                    $('#content-img').hide();
-                }
-            });
-        });
-    </script>
-    <script src="/pacmeal_frame/User/assets/js/tablink.js"></script>
+        </div>
+        <div id="tab-2" class="tab-content">
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-menu">
+      <button>적용</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/regionSP.js"></script>
+  <script>
+    function handleClickColor(this_id) {
+      const id = document.getElementById(this_id);
+
+      id.style.color = "blue";
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".btn").off("click").on("click", function () {
+        if ($(".test").hasClass("active")) {
+          $(".test").removeClass("active");
+        }
+        else {
+          $(".test").addClass("active");
+        }
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $('#content-p').click(function () {
+        if ($("#content-img").css("display") == "none") {
+          $('#content-img').show();
+        }
+        else if ($("#content-img").css("display") != "none") {
+          $('#content-img').hide();
+        }
+      });
+    });
+  </script>
+  <script>
+    $('.tab-link').click(function () {
+      var tab_id = $(this).attr('data-tab');
+
+      $('.tab-link').removeClass('current');
+      $('.tab-content').removeClass('current');
+
+      $(this).addClass('current');
+      $("#" + tab_id).addClass('current');
+    });
+  </script>
 </body>
+
 </html>

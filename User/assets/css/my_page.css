@@ -31,7 +31,7 @@ body {
 #toolbar .TS-close-1 {
   min-width: 24px;
   min-height: 24px;
-  transform: translate(0%, 25%);
+  transform: translate(5%, 25%);
 }
 #toolbar .TS-close-2 {
   min-width: 24px;
@@ -39,6 +39,25 @@ body {
   font-size: 80%;
   text-align: center;
   transform: translate(0%, 30%);
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  /* ipad */
+  #toolbar .TS-close-2 {
+    min-width: 24px;
+    min-height: 24px;
+    font-size: 120%;
+    text-align: center;
+    transform: translate(0%, 30%);
+    font-weight: bold;
+  }
+}
+#toolbar .TS-close-3 {
+  min-width: 24px;
+  min-height: 24px;
+  font-size: 80%;
+  text-align: right;
+  transform: translate(-5%, 30%);
   font-weight: bold;
 }
 /* My Page 1*/
