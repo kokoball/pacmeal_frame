@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/master_content.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Order Page 1</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2" style="font-size: 120%; flex: 3;">
+        <span style="font-size: 140%; font-weight: bold;">팩밀</span>파트너스
+      </div>
+      <div class="TS-close-2"></div>
+    </section>
+
+    <!-- Shop Food Tab Menu  -->
+    <section id="tab-Menu">
+      <div class="allWrap">
+        <section class="content first">
+          <div class="content-1">
+            <div>메뉴 기본 정보</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">카테고리</div>
+          <div class="content-2"><input type="text" placeholder=""></div>
+          <div class="content-1">메뉴명</div>
+          <div class="content-2"><input type="text" placeholder="  (주의) 메뉴와 무관한 내용 입력시 삭제"></div>
+          <div class="content-1">준비시간</div>
+          <div class="content-2"><input type="text" placeholder="  조리 및 포장에 소요되는 시간을 분으로 입력"></div>
+        </section>
+
+        <section class="content first">
+          <div class="content-1">
+            <div>가격 및 판매수량 정보</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">정상가격</div>
+          <div class="content-2"><input type="text" placeholder="  평상시 판매하는 가격 입력"></div>
+          <div class="content-1">할인가격</div>
+          <div class="content-2"><input type="text" placeholder="  팩밀에서 판매될 가격 입력"></div>
+          <span>할인 : 최소 30% 이상 할인된 가격이어야 함</span>
+          <div class="content-1">재고수량</div>
+          <div class="content-2"><input type="text" placeholder="  숫자만 입력"></div>
+          <div class="content-1">최대 주문 수량 제한 (한 번 주문시)</div>
+          <div class="content-2"><input type="text" placeholder=""></div>
+          <div class="content-1">마감시간</div>
+          <div class="content-2"><input type="text" placeholder=""></div>
+          <div class="content-1">자동판매시간</div>
+          <div class="content-2"><input type="text" placeholder="  영업시간 내에서만 입력 가능"></div>
+        </section>
+
+        <section class="content fifth">
+          <div class="content-1">
+            판매 상태
+          </div>
+          <div class="content-2">
+            <span class="payment-method" style="padding-left: 5%;">
+              <input type="radio" class="input-radio" name="radio" id="radio3" checked>
+              <label for="radio3" class="form-radio">
+                <div>판매중</div>
+              </label>
+            </span>
+            <span class="payment-method">
+              <input type="radio" class="input-radio" name="radio" id="radio4">
+              <label for="radio4" class="form-radio">
+                <div>판매중지</div>
+              </label>
+            </span>
+          </div>
+        </section>
+
+        <section class="content first">
+          <div class="content-1">
+            <div>메뉴 상세 정보</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+
+        <section class="content third">
+          <div class="content-1">메뉴 소개(선택입력)</div>
+          <div class="content-2"><textarea type="text" cols="10" rows="6" placeholder=" 상품구성 및 안내사항 입력"></textarea>
+          </div>
+        </section>
+        <section class="content fourth">
+          <div class="content-1">결제내역</div>
+          <div class="content-2">
+            <div>총 주문금액</div>
+            <div>9,000원</div>
+          </div>
+          <div class="content-2">
+            <div>팩밀포인트</div>
+            <div>0원</div>
+          </div>
+          <div class="content-2" style="border-bottom: 1px solid #EEEEEE;">
+            <div>할인쿠폰</div>
+            <div>0원</div>
+          </div>
+          <div class="content-3">
+            <div>총 결제금액</div>
+            <div>9,000원</div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+
+
+    <!-- Bottom Menu Bar -->
+    <div id="order-menu">
+      <button>주문하기</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+
+</body>
+
+</html>
