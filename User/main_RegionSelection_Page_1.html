@@ -46,9 +46,11 @@
     visibility: hidden;
   }
 
-  /* #A:checked~* .expandable {
-    visibility: visible;
-  } */
+  #tab-1>.content1>img {
+    padding-top: 8px;
+    width: 22px;
+    height: 22px;
+  }
 </style>
 
 <body>
@@ -67,35 +69,35 @@
           </p>
         </div>
         <div id="tab-1" class="tab-content current">
-          <div class=" content1">
+          <div class="content1">
             <input type='radio' name='region' value='all' id='A' />
             <label for='A' onclick="handleClickColor('A-1')" checked>전체</label>
-            <img id='A-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='A-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
           <div class="content1">
             <input type='radio' name='region' value='east' id='E' />
             <label for='E' onclick="handleClickColor('E-1')">동구</label>
-            <img id='E-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='E-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
           <div class="content1">
             <input type='radio' name='region' value='west' id='W' />
             <label for='W' onclick="handleClickColor('W-1')">서구</label>
-            <img id='W-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='W-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
           <div class="content1">
             <input type='radio' name='region' value='south' id='S' />
             <label for='S' onclick="handleClickColor('S-1')">남구</label>
-            <img id='S-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='S-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
           <div class="content1">
             <input type='radio' name='region' value='north' id='N' />
             <label for='N' onclick="handleClickColor('N-1')">북구</label>
-            <img id='N-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='N-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
           <div class="content1">
             <input type='radio' name='region' value='san' id='SAN' />
             <label for='SAN' onclick="handleClickColor('SAN-1')">광산구</label>
-            <img id='SAN-1' class="expandable" src="images/icon/bottom_arrow.svg" alt="">
+            <img id='SAN-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
           </div>
 
         </div>
