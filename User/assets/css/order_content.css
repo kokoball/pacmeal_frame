@@ -127,8 +127,23 @@ a:visited {
   min-height: 35px;
   border-radius: 0.5em;
 }
+#tab-Menu > div > section.content.second > div.content-2 > span > label{
+  min-width: 200px;
+}
 .second > .content-2 > span > label > div {
-  margin-top: 5%;
+  margin-top: 2%;
+}
+.third .selectbox{
+  text-align: center;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
+.third .selectbox #select{
+  width: 300px;
+  height: 45px;
+  border: 1px solid;
+  font-weight: bold;
+  font-size: 110%;
 }
 .third .content-2 {
   display: flex;

@@ -1,112 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
-	<link rel="stylesheet" href="assets/css/order_content.css" />
-    <script
-	  src="https://code.jquery.com/jquery-3.6.0.js"
-	  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-	  crossorigin="anonymous"></script>
-    <title>Order Page 1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/order_content.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Order Page 1</title>
 </head>
+
 <body>
-    <div id="wrap">
-		<!-- Toolbar -->
-        <section id="toolbar">
-            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
-            <div class="TS-close-2">주문하기</div>
-            <div class="TS-close-2"></div>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2">주문하기</div>
+      <div class="TS-close-2"></div>
+    </section>
+
+    <!-- Shop Food Tab Menu  -->
+    <section id="tab-Menu">
+      <div class="allWrap">
+        <section class="content first">
+          <div class="content-1">
+            <div>총 주문금액</div>
+            <div style="font-weight:bolder;">9,000원</div>
+          </div>
+          <div class="content-2">+ 더 담으러 가기</div>
         </section>
-
-        <!-- Shop Food Tab Menu  -->
-        <section id="tab-Menu">
-            <div class="allWrap">     
-                <section class="content first">
-                    <div class="content-1">
-                        <div>총 주문금액</div>
-                        <div style="font-weight:bolder;">9,000원</div>
-                    </div>
-                    <div class="content-2">+ 더 담으러 가기</div>
-                </section>
-                <section class="content second">
-                    <div class="content-1">이용방법</div>
-                    <div class="content-2">
-                        <span class="form-inline"> 
-                            <input type="radio" class="input-radio" name="radio" id="radio1" checked>
-                            <label for="radio1" class="form-radio"><div>방문포장</div></label>
-                        </span>
-                        <span class="form-inline">
-                            <input type="radio" class="input-radio" name="radio" id="radio2">
-                            <label for="radio2" class="form-radio"><div>매장식사</div></label>
-                        </span>
-                    </div>
-                </section>
-                <section class="content third">
-                    <div class="content-1">방문예정시간</div>
-                    <div class="content-2"><input type="text" placeholder="  방문 예정 시간"></div>
-                </section>
-                <section class="content third">
-                    <div class="content-1">주문시 요청 사항</div>
-                    <div class="content-2"><textarea type="text" cols="10" rows="6" placeholder=" 가게 사장님에게.."></textarea></div>
-                </section>
-                <section class="content fourth">
-                    <div class="content-1">결제내역</div>
-                    <div class="content-2">
-                        <div>총 주문금액</div>
-                        <div>9,000원</div>
-                    </div>
-                    <div class="content-2">
-                        <div>팩밀포인트</div>
-                        <div>0원</div>
-                    </div>
-                    <div class="content-2" style="border-bottom: 1px solid #EEEEEE;">
-                        <div>할인쿠폰</div>
-                        <div>0원</div>
-                    </div>
-                    <div class="content-3">
-                        <div>총 결제금액</div>
-                        <div>9,000원</div>
-                    </div>
-                </section>
-                <section class="content fifth">
-                    <div class="content-1">
-                        결제수단
-                    </div>
-                    <div class="content-2">
-                        <span class="payment-method">
-                            <input type="radio" class="input-radio" name="radio" id="radio3" checked>
-                            <label for="radio3" class="form-radio">
-                                <div>카드결제</div>
-                            </label>
-                        </span>
-                        <span class="payment-method">
-                            <input type="radio" class="input-radio" name="radio" id="radio4">
-                            <label for="radio4" class="form-radio">
-                                <div>휴대폰 결제</div>
-                            </label>
-                        </span>
-                        <span class="payment-method">
-                            <input type="radio" class="input-radio" name="radio" id="radio5">
-                            <label for="radio5" class="form-radio">
-                                <div>카카오페이</div>
-                            </label>
-                        </span>
-                    </div>
-
-                </section>
-            </div>
+        <section class="content second">
+          <div class="content-1">이용방법</div>
+          <div class="content-2">
+            <span class="form-inline">
+              <input type="radio" class="input-radio" name="radio" id="radio1" checked>
+              <label for="radio1" class="form-radio">
+                <div>방문포장</div>
+              </label>
+            </span>
+            <span class="form-inline">
+              <input type="radio" class="input-radio" name="radio" id="radio2">
+              <label for="radio2" class="form-radio">
+                <div>매장식사</div>
+              </label>
+            </span>
+          </div>
         </section>
+        <section class="content third">
+          <div class="content-1">방문예정시간</div>
+          <div class="selectbox">
+            <label for="select">예상 시간</label>
+            <select id="select">
+              <option selected>&nbsp;0 분</option>
+              <option>&nbsp;10 분</option>
+              <option>&nbsp;20 분</option>
+              <option>&nbsp;30 분</option>
+              <option>&nbsp;40 분</option>
+            </select>
+          </div>
+        </section>
+        <section class="content third">
+          <div class="content-1">주문시 요청 사항</div>
+          <div class="content-2"><textarea type="text" cols="10" rows="6" placeholder=" 가게 사장님에게.."></textarea></div>
+        </section>
+        <section class="content fourth">
+          <div class="content-1">결제내역</div>
+          <div class="content-2">
+            <div>총 주문금액</div>
+            <div>9,000원</div>
+          </div>
+          <div class="content-2">
+            <div>팩밀포인트</div>
+            <div>0원</div>
+          </div>
+          <div class="content-2" style="border-bottom: 1px solid #EEEEEE;">
+            <div>할인쿠폰</div>
+            <div>0원</div>
+          </div>
+          <div class="content-3">
+            <div>총 결제금액</div>
+            <div>9,000원</div>
+          </div>
+        </section>
+        <section class="content fifth">
+          <div class="content-1">
+            결제수단
+          </div>
+          <div class="content-2">
+            <span class="payment-method">
+              <input type="radio" class="input-radio" name="radio" id="radio3" checked>
+              <label for="radio3" class="form-radio">
+                <div>카드결제</div>
+              </label>
+            </span>
+            <span class="payment-method">
+              <input type="radio" class="input-radio" name="radio" id="radio4">
+              <label for="radio4" class="form-radio">
+                <div>휴대폰 결제</div>
+              </label>
+            </span>
+            <span class="payment-method">
+              <input type="radio" class="input-radio" name="radio" id="radio5">
+              <label for="radio5" class="form-radio">
+                <div>카카오페이</div>
+              </label>
+            </span>
+          </div>
 
-        
+        </section>
+      </div>
+    </section>
 
-        <!-- Bottom Menu Bar -->
-        <div id="order-menu">
-            <button>주문하기</button>
-        </div>
-	</div>
 
-    <!-- Scripts -->
 
+    <!-- Bottom Menu Bar -->
+    <div id="order-menu">
+      <button>주문하기</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script> // select box
+    $(function () {
+      var selectTarget = $('.selectbox select');
+
+      // focus 가 되었을 때와 focus 를 잃었을 때
+      selectTarget.on({
+        'focus': function () {
+          $(this).parent().addClass('focus');
+        },
+        'blur': function () {
+          $(this).parent().removeClass('focus');
+        }
+      });
+
+      selectTarget.change(function () {
+        var select_name = $(this).children('option:selected').text();
+        $(this).siblings('label').text(select_name);
+        $(this).parent().removeClass('focus');
+      });
+    });
+  </script>
 </body>
+
 </html>
