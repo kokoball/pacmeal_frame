@@ -152,6 +152,33 @@ a:visited {
   border-radius: 0.5em;
   border: 1px solid #cccccc;
 }
+.third .selectbox{
+  text-align: center;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
+.third .selectbox #select{
+  margin: 0 5% 2% 5%;
+  width: 90%;
+  height: 49px;
+  border: 1px solid #cccccc;
+  border-radius: 0.5em;
+  font-weight: bold;
+  font-size: 110%;
+}
+#tab-Menu > div > section:nth-child(7) > button {
+ margin: 5%;
+ width: 180px;
+ height: 50px;
+ color: white;
+ font-size: 110%;
+ font-weight: bold;
+ background-color: #7ad8df;
+ 
+ border-radius: .25em;
+}
+
+
 .fourth .content-2 {
   display: flex;
   justify-content: space-between;
@@ -211,3 +238,89 @@ a:visited {
   background-color: black;
   border-radius: 0.5em;
 }
+
+/* Time Sale Swiper */
+#time-sale .swiper-wrapper {
+  width: 50%;
+  height: 100%;
+}
+
+#time-sale .swiper-container .mySwiper {
+  width: 100%;
+  height: 100%;
+}
+#time-sale .swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#time-sale .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+#time-sale .swiper-slide {
+  width: 75%;
+  margin: 0;
+}
+#time-sale .swiper-slide .silde-img {
+  border-radius: 10%;
+}
+#time-sale .swiper-slide .silde-img img {
+  object-fit: cover;
+}
+#time-sale .slide-text {
+  width: 100%;
+  height: 100%;
+  margin: 5% 3% 0 3%;
+  float: left;
+}
+#time-sale .slide-text p {
+  margin: 0;
+}
+#time-sale .slide-text :nth-child(1) {
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+}
+#time-sale .slide-text :nth-child(2) {
+  font-size: 0.8em;
+}
+#time-sale .slide-text > :nth-child(3) {
+  font-size: 0.8em;
+}
+#time-sale .slide-text :nth-child(4) {
+  font-size: 0.8em;
+  display: flex;
+}
+#time-sale .slide-text :nth-child(4) :nth-child(1) {
+  color: #ff0000;
+}
+#time-sale .slide-text :nth-child(4) :nth-child(3) {
+  font-weight: bold;
+}
+
+/* time meida queri */
+@media (min-width: 240px) {
+  /* Galaxy Fold */
+  #time-sale .swiper-slide .silde-img img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+
