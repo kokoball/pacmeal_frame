@@ -333,6 +333,28 @@ a:visited {
   display: flex;
   justify-content: space-between;
 }
+/* order_History tab2 장바구니 */
+#menu-detail{
+  border-bottom: #eeeeee 1px solid;
+  padding: 0 1%;
+  font-weight: bold;
+}
+#menu-detail > div{
+  display: flex;
+  padding: 2% 0;
+}
+#menu-detail > div > img{
+  width: 16px;
+  height: 16px;
+}
+#sub-button {
+  width: 100%;
+  color: white;
+  background: black;
+  border-radius: 0.5em;
+  height: 45px;
+  margin: 5% 0;
+}
 
 /* Bottom Menu Bar */
 #bottom-menu {
