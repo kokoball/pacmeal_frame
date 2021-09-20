@@ -33,7 +33,7 @@ a:visited {
   height: 27vh;
   min-height: 180px;
 }
-#banner > img:nth-child(1) {
+#banner > :nth-child(1) {
   margin: 3%;
   float: left;
   min-width: 30px;
