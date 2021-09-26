@@ -62,49 +62,51 @@
 
     <!-- Region Category -->
     <section id="tab-Menu">
-      <div class="allWrap">
-        <div class="tabBox">
-          <p class="tab-link current" data-tab="tab-1">
-            <span style="display:inline-block; padding-top: 5%;">광주</span>
-          </p>
-        </div>
-        <div id="tab-1" class="tab-content current">
-          <div class="content1">
-            <input type='radio' name='region' value='all' id='A' />
-            <label for='A' onclick="handleClickColor('A-1')" checked>전체</label>
-            <img id='A-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+      <form id="tab-Menu-form">
+        <div class="allWrap">
+          <div class="tabBox">
+            <p class="tab-link current" data-tab="tab-1">
+              <span style="display:inline-block; padding-top: 5%;">광주</span>
+            </p>
           </div>
-          <div class="content1">
-            <input type='radio' name='region' value='east' id='E' />
-            <label for='E' onclick="handleClickColor('E-1')">동구</label>
-            <img id='E-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+          <div id="tab-1" class="tab-content current">
+            <div class="content1">
+              <input type='radio' name='region' value='all' id='A' />
+              <label for='A' onclick="handleClickColor('A-1')" checked>전체</label>
+              <img id='A-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
+            <div class="content1">
+              <input type='radio' name='region' value='east' id='E' />
+              <label for='E' onclick="handleClickColor('E-1')">동구</label>
+              <img id='E-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
+            <div class="content1">
+              <input type='radio' name='region' value='west' id='W' />
+              <label for='W' onclick="handleClickColor('W-1')">서구</label>
+              <img id='W-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
+            <div class="content1">
+              <input type='radio' name='region' value='south' id='S' />
+              <label for='S' onclick="handleClickColor('S-1')">남구</label>
+              <img id='S-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
+            <div class="content1">
+              <input type='radio' name='region' value='north' id='N' />
+              <label for='N' onclick="handleClickColor('N-1')">북구</label>
+              <img id='N-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
+            <div class="content1">
+              <input type='radio' name='region' value='san' id='SAN' />
+              <label for='SAN' onclick="handleClickColor('SAN-1')">광산구</label>
+              <img id='SAN-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
+            </div>
           </div>
-          <div class="content1">
-            <input type='radio' name='region' value='west' id='W' />
-            <label for='W' onclick="handleClickColor('W-1')">서구</label>
-            <img id='W-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
-          </div>
-          <div class="content1">
-            <input type='radio' name='region' value='south' id='S' />
-            <label for='S' onclick="handleClickColor('S-1')">남구</label>
-            <img id='S-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
-          </div>
-          <div class="content1">
-            <input type='radio' name='region' value='north' id='N' />
-            <label for='N' onclick="handleClickColor('N-1')">북구</label>
-            <img id='N-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
-          </div>
-          <div class="content1">
-            <input type='radio' name='region' value='san' id='SAN' />
-            <label for='SAN' onclick="handleClickColor('SAN-1')">광산구</label>
-            <img id='SAN-1' class="expandable" src="images/icon/chevron-bottom.jpg" alt="">
-          </div>
+          <div id="tab-2" class="tab-content">
 
+          </div>
         </div>
-        <div id="tab-2" class="tab-content">
+      </form>
 
-        </div>
-      </div>
     </section>
 
 
