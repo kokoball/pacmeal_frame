@@ -9,6 +9,33 @@
     crossorigin="anonymous"></script>
   <title>Order Page 1</title>
 </head>
+<style>
+  #my_modal {
+    display: none;
+    text-align: center;
+    width: 250px;
+    padding: 30px 20px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+
+  #my_modal .modal_close_btn1 {
+    position: absolute;
+    bottom: 10px;
+    font-weight: bold;
+    left: 30px;
+    color: #999999;
+  }
+
+  #my_modal .modal_close_btn2 {
+    position: absolute;
+    bottom: 10px;
+    font-weight: bold;
+    right: 30px;
+  }
+</style>
 
 <body>
   <div id="wrap">
@@ -111,6 +138,16 @@
       </div>
     </section>
 
+    <!-- modal -->
+    <div id="my_modal">
+      가게에서 주문을 접수합니다.
+      <br>
+      주문하기를 완료하시겠습니까?
+      <br>
+      <br>
+      <a class="modal_close_btn1">취소하기</a>
+      <a class="modal_close_btn2">주문완료</a>
+    </div>
 
 
     <!-- Bottom Menu Bar -->
@@ -139,6 +176,65 @@
         $(this).siblings('label').text(select_name);
         $(this).parent().removeClass('focus');
       });
+    });
+  </script>
+  <script>
+    function modal(id) {
+      var zIndex = 9999;
+      var modal = document.getElementById(id);
+
+      // 모달 div 뒤에 희끄무레한 레이어
+      var bg = document.createElement('div');
+      bg.setStyle({
+        position: 'fixed',
+        zIndex: zIndex,
+        left: '0px',
+        top: '0px',
+        width: '100%',
+        height: '100%',
+        overflow: 'auto',
+        // 레이어 색갈은 여기서 바꾸면 됨
+        backgroundColor: 'rgba(0,0,0,0.4)'
+      });
+      document.body.append(bg);
+
+      // 닫기 버튼 처리, 시꺼먼 레이어와 모달 div 지우기
+      modal.querySelector('.modal_close_btn1').addEventListener('click', function () {
+        bg.remove();
+        modal.style.display = 'none';
+      });
+
+      modal.querySelector('.modal_close_btn2').addEventListener('click', function () {
+        bg.remove();
+        modal.style.display = 'none';
+      });
+
+      modal.setStyle({
+        position: 'fixed',
+        display: 'block',
+        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+
+        // 시꺼먼 레이어 보다 한칸 위에 보이기
+        zIndex: zIndex + 1,
+
+        // div center 정렬
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        msTransform: 'translate(-50%, -50%)',
+        webkitTransform: 'translate(-50%, -50%)'
+      });
+    }
+
+    // Element 에 style 한번에 오브젝트로 설정하는 함수 추가
+    Element.prototype.setStyle = function (styles) {
+      for (var k in styles) this.style[k] = styles[k];
+      return this;
+    };
+
+    document.getElementById('order-menu').addEventListener('click', function () {
+      // 모달창 띄우기
+      modal('my_modal');
     });
   </script>
 </body>
