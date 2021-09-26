@@ -118,8 +118,12 @@
       }
       if (number <= 0) number = 0;
       // 결과 출력
+      const maxNumber = 3;
+      if (number >= maxNumber) {
+        modal('my_modal');
+        number = maxNumber;
+      }
       resultElement.innerText = number;
-      if (number >= 3) modal('my_modal');
     }
   </script>
   <script>
