@@ -571,13 +571,15 @@ input:checked + .slider:before {
   padding: 3%;
 }
 
-#tab-Menu > div > a > button {
+.search-page2 button {
+  width: 80%;
+  min-height: 45px;
+  margin: 0 10%;
+  align-self: center;
+  text-align: center;
   color: white;
   background-color: black;
   border-radius: 0.5em;
-  width: 90%;
-  margin: 5%;
-  height: 45px;
 }
 
 /* Shop Search media queri */

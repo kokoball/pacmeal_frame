@@ -816,6 +816,6 @@ a:visited {
 }
 @media (min-width: 700px) {
   #near-shop > .swiper-container  > .swiper-wrapper{
-    width: 50%;
+    width: 98%;
   }
 }
