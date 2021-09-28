@@ -10,6 +10,39 @@
   <link rel="stylesheet" href="assets/css/my_page.css" />
   <title>My Page</title>
 </head>
+<style>
+  .asc {
+    display: block;
+  }
+
+  .asd {
+    width: 58%;
+    display: inline-block;
+  }
+
+  .ase {
+    font-size: 80%;
+    font-weight: bold;
+    margin-left: 1%;
+    border-color: #00D1C4;
+    color: #00D1C4;
+    background-color: white;
+    padding: 5px 8px;
+    border-radius: 0.5em;
+    min-width: 100px;
+  }
+
+  @media (min-width: 650px) {
+    .asd {
+      width: 80%;
+    }
+
+    .ase {
+      margin-left: 2%;
+    }
+
+  }
+</style>
 
 <body>
   <div id="wrap">
@@ -28,17 +61,20 @@
             <form class="validation-form" novalidate>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="phone-number" style="font-size: 110%; font-weight: bold;">휴대전화</label>
-                  <input type="number" class="form-control" id="phone-number" placeholder="- 제외하고 입력" value="" required>
+                  <label class='asc' for="phone-number" style="font-size: 110%; font-weight: bold;">휴대전화</label>
+                  <input type="number" class="form-control asd" id="phone-number" placeholder="- 제외하고 입력" value=""
+                    required>
+                  <button class="ase">인증번호 받기</button>
                   <div class="invalid-feedback">
                     휴대전화 번호를 입력해 주세요.
                   </div>
                 </div>
               </div>
               <div class="mb-3">
-                <label for="certification-number" style="font-size: 110%; font-weight: bold;">인증번호</label>
-                <input type="number" class="form-control" id="certification-number" placeholder="인증번호를 입력해 주세요"
+                <label class='asc' for="certification-number" style="font-size: 110%; font-weight: bold;">인증번호</label>
+                <input type="number" class="form-control asd" id="certification-number" placeholder="인증번호를 입력해 주세요"
                   required>
+                <button class="ase">확인</button>
                 <div class="invalid-feedback">
                   이메일을 입력해 주세요.
                 </div>
