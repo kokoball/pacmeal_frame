@@ -1,24 +1,258 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>지도 생성하기</title>
-    
-</head>
-<body>
-<!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:100%;height:350px;"></div>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+  <%@ page import="java.io.PrintWriter" %>
+    <%@ page import="java.util.ArrayList" %>
+      <%@ page import="java.net.URLEncoder" %>
+        <%@ page import="user.UserDAO" %>
+          <%@ page import="user.UserDTO" %>
+            <%@ page import="res.ResDAO" %>
+              <%@ page import="res.ResDTO" %>
+                <!DOCTYPE html>
+                <html lang="en">
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d0b6fab83bb24971a8f388945955859"></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+                <head>
+                  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+                  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+                  <link rel="stylesheet" href="css/main_content.css" />
+                  <script src="https://code.jquery.com/jquery-3.6.0.js"
+                    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+                  <title>Near Shop Page</title>
+                </head>
 
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-</script>
-</body>
-</html>
+                <body>
+                  <% request.setCharacterEncoding("UTF-8"); int pageNumber=0; String dongnaeG="광주 전체" ; String
+                    dongnaeD="전체" ; if (request.getParameter("pageNumber") !=null) {
+                    pageNumber=Integer.parseInt(request.getParameter("pageNumber")); }
+                    if(request.getParameter("dongnaeG") !=null) { dongnaeG=request.getParameter("dongnaeG"); }
+                    if(request.getParameter("dongnaeD") !=null) { dongnaeD=request.getParameter("dongnaeG"); } ResDAO
+                    resDAO=new ResDAO(); ArrayList<ResDTO> list = new ArrayList<ResDTO>();
+                      list = new ResDAO().getList(dongnaeG, pageNumber);
+
+                      if (list.size() == 0) {
+                      PrintWriter script = response.getWriter();
+                      script.println("
+                      <script>");
+                        script.println("alert('해당 조건으로 등록된 정보가 없습니다.')");
+                        script.println("history.back();");
+                        script.println("</script>");
+                      script.close();
+                      return;
+                      } else {
+
+                      }
+                      %>
+
+                      <div id="wrap">
+                        <!-- Toolbar -->
+                        <section id="toolbar">
+                          <div class="TS-close-1"><a href="javascript:window.history.back();"><img
+                                src="images/icon/arrow-left.svg"></a></div>
+                          <div class="TS-close-2">내 주변 맛집</div>
+                          <div class="TS-close-2"></div>
+                        </section>
+
+                        <section id="map-content">
+                          <div id="map" style="width:100%;height:350px;"></div>
+                        </section>
+
+                        <section id="near-shop" style="overflow: hidden;">
+                          <div class="swiper-container near-shop-Swiper">
+                            <div class="swiper-wrapper">
+                              <% for (int j=0; j < list.size(); j++) { if(j==15) break; ResDTO res=list.get(j); %>
+                                <div class="swiper-slide">
+                                  <a class="flex-box" href="shop_Search_Page_1.jsp?resID=<%=list.get(j).getResID()%>">
+                                    <div class="slide-img"><img src="images/upload/<%= list.get(j).getResView() %>">
+                                    </div>
+                                    <div class="slide-text">
+                                      <p>
+                                        <%=list.get(j).getResName()%>
+                                      </p>
+                                      <p style="font-size: 110%; font-weight: bold;">가게명_1</p>
+                                      <p>
+                                        <%=list.get(j).getResName()%>
+                                      </p>
+                                    </div>
+                                  </a>
+                                </div>
+                                <% } %>
+                            </div>
+                          </div>
+                        </section>
+
+                        <!-- Bottom Menu Bar -->
+                        <div id="bottom-menu">
+                          <div><a href="main_Page_1.jsp"><img src="images/icon/home_icon.svg">
+                              <div>홈</div>
+                            </a></div>
+                          <div><a href="near_Shop_Page_1.jsp"><img src="images/icon/map_icon.svg">
+                              <div>내 주변</div>
+                            </a></div>
+                          <div><a href="order_History.jsp"><img src="images/icon/order_icon.svg">
+                              <div>주문내역</div>
+                          </div>
+                          <div><a href="my_Page_1.jsp"><img src="images/icon/my_icon.svg">
+                              <div>나의 팩밀</div>
+                            </a></div>
+                        </div>
+                      </div>
+
+                      <!-- Scripts -->
+                      <script src="js/jquery.min.js"></script>
+                      <script src="js/skel.min.js"></script>
+                      <script src="js/util.js"></script>
+                      <script src="js/main.js"></script>
+                      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                      <!-- Drop Down Scripts-->
+                      <script>
+        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                          }
+            
+        window.onclick = function (event) {
+                            if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
+                              var dropdowns = document.getElementsByClassName("dropdown-content");
+                              var i;
+                              for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                  openDropdown.classList.remove('show');
+                                }
+                              }
+                            }
+                          }
+                      </script>
+
+                      <!-- Banner Swiper -->
+                      <script>
+        var swiper = new Swiper(".swiper-wrapper", {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class=";' + className + '">' + (index + 1) + "</sapn>";
+            },
+          },
+        });
+                      </script>
+
+                      <!-- kakao map api -->
+                      <script type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=키공유X=services"></script>
+                      <script>
+                        var NORMAL_MARKER_URL = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png",
+                          SPRITE_MARKER_URL = 'http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png'; // 스프라이트 마커 이미지 URL
+
+                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                          mapOption = {
+                            center: new kakao.maps.LatLng(35.17735753768792, 126.84727326070836), // 지도의 중심좌표
+                            level: 9 // 지도의 확대 레벨
+                          };
+
+                        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+                        // 마커를 표시할 위치와 title 객체 배열입니다 
+                        var positions = [
+
+		<%
+				for (int j = 0; j < list.size(); j++) {
+                          if (j == 15) break;
+					ResDTO res = list.get(j);
+		%>
+                          {
+                            title: '<%=list.get(j).getResName()%>',
+                            latlng: new kakao.maps.LatLng(<%=list.get(j).getResLat() %>, <%=list.get(j).getResLng() %>)
+                          },
+		<%
+			}
+
+		%>
+		],
+                        selectedMarker = null; // 클릭한 마커를 담을 변수
+
+
+                        // 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+                        var bounds = new kakao.maps.LatLngBounds();
+
+                        for (var i = 0, len = positions.length; i < len; i++) {
+
+                          addMarker(positions[i], i);
+                          bounds.extend(positions[i]['latlng']);
+                        }
+
+
+                        // 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
+                        function addMarker(position, i) {
+                          var markerSize = new kakao.maps.Size(24, 35),
+                            overMarkerSize = new kakao.maps.Size(30, 40);
+                          // 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
+                          var normalImage = createMarkerImage(markerSize, NORMAL_MARKER_URL),
+                            overImage = createMarkerImage(overMarkerSize, SPRITE_MARKER_URL);
+
+                          // 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
+                          var marker = new kakao.maps.Marker({
+                            map: map,
+                            position: positions[i].latlng, // 마커를 표시할 위치
+                            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                            image: normalImage,
+                            clickable: true,
+                          });
+
+
+                          // 마커 객체에 마커아이디와 마커의 기본 이미지를 추가합니다
+                          marker.normalImage = normalImage;
+
+                          // 마커에 mouseover 이벤트를 등록합니다
+                          kakao.maps.event.addListener(marker, 'mouseover', function () {
+
+                            // 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
+                            // 마커의 이미지를 오버 이미지로 변경합니다
+                            if (!selectedMarker || selectedMarker !== marker) {
+                              marker.setImage(overImage);
+                            }
+                          });
+
+                          // 마커에 mouseout 이벤트를 등록합니다
+                          kakao.maps.event.addListener(marker, 'mouseout', function () {
+
+                            // 클릭된 마커가 없고, mouseout된 마커가 클릭된 마커가 아니면
+                            // 마커의 이미지를 기본 이미지로 변경합니다
+                            if (!selectedMarker || selectedMarker !== marker) {
+                              marker.setImage(normalImage);
+                            }
+                          });
+                          kakao.maps.event.addListener(marker, 'click', function () {
+                            if (positions[i]['title'] === this.Fb) {
+                              var moveLatLng = positions[i]['latlng'];
+                              map.panTo(moveLatLng);
+                            }
+                            classList = document.getElementsByClassName("flex-box")
+                            classList[i].click();
+                          });
+                        }
+
+                        // MakrerImage 객체를 생성하여 반환하는 함수입니다
+                        function createMarkerImage(markerSize, URL) {
+                          var markerImage = new kakao.maps.MarkerImage(
+                            URL, // 스프라이트 마커 이미지 URL
+                            markerSize // 마커의 크기
+                          );
+
+                          return markerImage;
+                        }
+                        function setBounds() {
+                          // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+                          // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+                          map.setBounds(bounds);
+                        }
+                        setBounds()
+
+                      </script>
+
+
+                </body>
+
+                </html>
