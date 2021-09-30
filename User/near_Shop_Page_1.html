@@ -10,7 +10,6 @@
     crossorigin="anonymous"></script>
   <title>Near Shop Page</title>
 </head>
-g
 
 <body>
 
@@ -81,10 +80,30 @@ g
               </div>
             </a>
           </div>
+          <div class="swiper-slide">
+            <a class="flex-box" href="shop_Search_Page_1.html">
+              <div class="slide-img"><img src="images/gray_box.png"></div>
+              <div class="slide-text">
+                <p>동천장어구이장어탕</p>
+                <p>null</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="flex-box" href="shop_Search_Page_1.html">
+              <div class="slide-img"><img src="images/gray_box.png"></div>
+              <div class="slide-text">
+                <p>동천장어구이장어탕</p>
+                <p>null</p>
+              </div>
+            </a>
+          </div>
 
         </div>
+        <div id="SP-List" class="swiper-pagination"></div>
     </section>
 
+    <input type="button" value="시작" onclick="StartClock();" />
 
 
 
@@ -116,13 +135,16 @@ g
 
   <!-- Banner Swiper -->
   <script>
-    var swiper = new Swiper(".banner-Swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
+    var swiper = new Swiper(".mySwiper", {
+      allowTouchMove: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
       },
+
     });
   </script>
 
@@ -147,7 +169,7 @@ g
   </script>
   <!-- kakao map api -->
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d0b6fab83bb24971a8f388945955859"></script>
-  <script>
+  <!-- <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
       mapOption = {
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -156,6 +178,41 @@ g
 
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new kakao.maps.Map(mapContainer, mapOption);
+  </script> -->
+  <script>
+    function swiperActive() {
+      num = 0;
+      swList = document.getElementsByClassName("swiper-slide");
+      now = document.getElementsByClassName("swiper-slide-active")[0];
+
+      for (var i = 0; i < swList.length; i++) {
+        if (now == swList[i]) {
+          num = i
+        }
+      }
+      console.log(num)
+    }
+    function StartClock() {
+
+      swiperActive();
+
+      timerId = setInterval(swiperActive, 500);
+
+    }
+    function exe() {
+
+
+
+      var div1 = document.getElementById("a1");
+
+      div1.addEventListener('click', function (event) {
+
+        console.log(' hello ~ ');
+
+      });
+
+    }
+
   </script>
 </body>
 

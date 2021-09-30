@@ -26,19 +26,18 @@
         <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
           <div class="panel panel-success">
             <div class="panel-body">
-              <form id="login-form">
-                <div>
-                  <!-- button type submit -> button 으로 변경 -->
-                  <button type="button" class="form-control btn btn-primary" onClick="location.href='my_Page_3.html'"
-                    style="font-weight:bold; font-size: 150%; height: 40px;">
-                    이메일 로그인
-                  </button>
-                </div>
-                <div>
-                  <button type="submit" class="form-control btn btn-primary"
-                    style="height: 40px; background: url( 'images/icon/btn_kakao.svg' ) no-repeat center; background-size: cover;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                </div>
-              </form>
+              <div>
+                <!-- button type submit -> button 으로 변경 -->
+                <button type="button" class="form-control btn btn-primary" onClick="location.href='my_Page_3.html'"
+                  style="font-weight:bold; font-size: 150%; height: 40px;">
+                  이메일 로그인
+                </button>
+              </div>
+              <div>
+                <button type="submit" class="form-control btn btn-primary"
+                  onClick="location.href='javascript:kakaoLogin();'"
+                  style="height: 40px; background: url( 'images/icon/btn_kakao.svg' ) no-repeat center; background-size: cover;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              </div>
             </div>
           </div>
         </div>

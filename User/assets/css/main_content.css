@@ -771,7 +771,7 @@ a:visited {
   width: 80%;
   left: 50%;
   transform: translate(-50%,0);
-  bottom: 50px;
+  bottom: 80px;
   height: 120px;
   z-index: 999;
   min-width: 320px;
@@ -779,7 +779,7 @@ a:visited {
   margin: 0 auto;
 }
 #near-shop .flex-box {
-  width: 100%;
+  width: 200px;
   height: 100%;
   display: flex;
   background-color: #fff;

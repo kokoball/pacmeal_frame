@@ -1,157 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
-	<link rel="stylesheet" href="assets/css/main_content.css" />
-    <script
-	  src="https://code.jquery.com/jquery-3.6.0.js"
-	  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-	  crossorigin="anonymous"></script>
-    <title>Time Sale Page</title>
-</head>
-<body>
-    <div id="wrap">
-		<!-- Toolbar -->
-        <section id="toolbar">
-            <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
-            <div class="TS-close-2">오늘의 타임할인</div>
-            <div class="TS-close-2"></div>
-        </section>
 
-        <!-- Time Sale Menu  -->
-        <section id="time-sale-menu">
-            <div class="title">
-                <p class="t1">광주전체</p>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">
-                        <p class="t2">최신순</p>
-                        <img class="t3" src="images/icon/bottom_arrow.svg">
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=최신순&pageNumber=0">최신 순</a>
-                        <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=가격순&pageNumber=0">가격 순</a>
-                        <a href="#discount">할인높은 순</a>
-                        <a href="#follower">찜 많은 순</a>
-                    </div>
-                </div>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/main_content.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Time Sale Page</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2">오늘의 타임할인</div>
+      <div class="TS-close-2"></div>
+    </section>
+
+    <!-- Time Sale Menu  -->
+    <section id="time-sale-menu">
+      <div class="title">
+        <p class="t1">광주전체</p>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            <p class="t2">최신순</p>
+            <img class="t3" src="images/icon/bottom_arrow.svg">
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=최신순&pageNumber=0">최신
+              순</a>
+            <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4&searchType=가격순&pageNumber=0">가격
+              순</a>
+            <a href="#discount">할인높은 순</a>
+            <a href="#follower">찜 많은 순</a>
+          </div>
+        </div>
+      </div>
+      <div class="TS-content">
+        <div class="content">
+          <div class="content-1"><img src="images/gray_box.png"></div>
+          <div class="content-2">
+            <p>메뉴명_1</p>
+            <p>남은수량: 01개</p>
+            <p style="text-decoration: line-through;">정상가 14,000원</p>
+            <div class="tab-1-c">
+              <p>50%</p>
+              <p>7,000원</p>
             </div>
-            <div class="TS-content">
-                <div class="content">
-                    <div class="content-1"><img src="images/gray_box.png"></div>
-                    <div class="content-2">
-                        <p>메뉴명_1</p>
-                        <p>남은수량: 01개</p>
-                        <p style="text-decoration: line-through;">정상가 14,000원</p>
-                        <div class="tab-1-c">
-                            <p>50%</p>
-                            <p>7,000원</p>
-                        </div>
-                        <p>매장식사, 포장주문</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="content-1"><img src="images/DSC017362.jpg"></div>
-                    <div class="content-2">
-                        <p>메뉴명_1</p>
-                        <p>남은수량: 01개</p>
-                        <p style="text-decoration: line-through;">정상가 14,000원</p>
-                        <div class="tab-1-c">
-                            <p>50%</p>
-                            <p>7,000원</p>
-                        </div>
-                        <p>매장식사, 포장주문</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="content-1"><img src="images/cody05.jpg"></div>
-                    <div class="content-2">
-                        <p>메뉴명_1</p>
-                        <p>남은수량: 01개</p>
-                        <p style="text-decoration: line-through;">정상가 14,000원</p>
-                        <div class="tab-1-c">
-                            <p>50%</p>
-                            <p>7,000원</p>
-                        </div>
-                        <p>매장식사, 포장주문</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="content-1"><img src="images/gray_box.png"></div>
-                    <div class="content-2">
-                        <p>메뉴명_1</p>
-                        <p>남은수량: 01개</p>
-                        <p style="text-decoration: line-through;">정상가 14,000원</p>
-                        <div class="tab-1-c">
-                            <p>50%</p>
-                            <p>7,000원</p>
-                        </div>
-                        <p>매장식사, 포장주문</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="content-1"><img src="images/gray_box.png"></div>
-                    <div class="content-2">
-                        <p>메뉴명_1</p>
-                        <p>남은수량: 01개</p>
-                        <p style="text-decoration: line-through;">정상가 14,000원</p>
-                        <div class="tab-1-c">
-                            <p>50%</p>
-                            <p>7,000원</p>
-                        </div>
-                        <p>매장식사, 포장주문</p>
-                    </div>
-                </div>
+            <p>매장식사, 포장주문</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-1"><img src="images/DSC017362.jpg"></div>
+          <div class="content-2">
+            <p>메뉴명_1</p>
+            <p>남은수량: 01개</p>
+            <p style="text-decoration: line-through;">정상가 14,000원</p>
+            <div class="tab-1-c">
+              <p>50%</p>
+              <p>7,000원</p>
             </div>
-        </section>
-        <li>
-	
-            <a>이전</a>
-        
-            </li>
-            <li>
-        
-            <a href= "./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4
+            <p>매장식사, 포장주문</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-1"><img src="images/cody05.jpg"></div>
+          <div class="content-2">
+            <p>메뉴명_1</p>
+            <p>남은수량: 01개</p>
+            <p style="text-decoration: line-through;">정상가 14,000원</p>
+            <div class="tab-1-c">
+              <p>50%</p>
+              <p>7,000원</p>
+            </div>
+            <p>매장식사, 포장주문</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-1"><img src="images/gray_box.png"></div>
+          <div class="content-2">
+            <p>메뉴명_1</p>
+            <p>남은수량: 01개</p>
+            <p style="text-decoration: line-through;">정상가 14,000원</p>
+            <div class="tab-1-c">
+              <p>50%</p>
+              <p>7,000원</p>
+            </div>
+            <p>매장식사, 포장주문</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-1"><img src="images/gray_box.png"></div>
+          <div class="content-2">
+            <p>메뉴명_1</p>
+            <p>남은수량: 01개</p>
+            <p style="text-decoration: line-through;">정상가 14,000원</p>
+            <div class="tab-1-c">
+              <p>50%</p>
+              <p>7,000원</p>
+            </div>
+            <p>매장식사, 포장주문</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <li>
+
+      <a>이전</a>
+
+    </li>
+    <li>
+
+      <a href="./time_Sale__Page_1.jsp?region=%EA%B4%91%EC%A3%BC+%EC%A0%84%EC%B2%B4
             &searchType=%EC%B5%9C%EC%8B%A0%EC%88%9C
             &pageNumber=1">다음</a>
-        
-            </li>
 
-        
+    </li>
 
-        <!-- Bottom Menu Bar -->
-        <div id="bottom-menu">
-            <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg">
-                    <div>홈</div>
-                </a></div>
-            <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg">
-                    <div>내 주변</div>
-                </a></div>
-            <div><a href="order_History.html"><img src="images/icon/order_icon.svg">
-                    <div>주문내역</div>
-                </a></div>
-            <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg">
-                    <div>나의 팩밀</div>
-                </a></div>
-        </div>
-	</div>
-    <script>
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-menu">
+      <div><a href="main_Page_1.html"><img src="images/icon/home_icon.svg">
+          <div>홈</div>
+        </a></div>
+      <div><a href="near_Shop_Page_1.html"><img src="images/icon/map_icon.svg">
+          <div>내 주변</div>
+        </a></div>
+      <div><a href="order_History.html"><img src="images/icon/order_icon.svg">
+          <div>주문내역</div>
+        </a></div>
+      <div><a href="my_Page_1.html"><img src="images/icon/my_icon.svg">
+          <div>나의 팩밀</div>
+        </a></div>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
         }
-        
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn' | '.t2' | '.t3')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
+      }
+    }
+  </script>
 </body>
-</html>   
+
+</html>
