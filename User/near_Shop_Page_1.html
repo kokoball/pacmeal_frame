@@ -31,7 +31,7 @@
       <div class="swiper-container near-shop-Swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a class="flex-box" href="shop_Search_Page_1.html">
+            <a class="flex-box" onclick="StartClock()">
               <div class="slide-img"><img src="images/gray_box.png"></div>
               <div class="slide-text">
                 <p>서태후</p>
@@ -189,7 +189,7 @@
         if (now == swList[i]) {
           num = i
         }
-      }
+      }d
       console.log(num)
     }
     function StartClock() {
@@ -199,19 +199,7 @@
       timerId = setInterval(swiperActive, 500);
 
     }
-    function exe() {
 
-
-
-      var div1 = document.getElementById("a1");
-
-      div1.addEventListener('click', function (event) {
-
-        console.log(' hello ~ ');
-
-      });
-
-    }
 
   </script>
 </body>
