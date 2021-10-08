@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <title>Login Page 1</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"><a href="main_Page_1.html"><img src="images/icon/arrow-left.svg"></a></div>
+      <div class="TS-close-2">
+        <span>팩밀</span>파트너스
+      </div>
+      <div class="TS-close-3"></div>
+    </section>
+    <h3 style="text-align: center; margin-top: 50px; font-weight: bold;">회원가입</h3>
+
+    <!-- Sing Up Content -->
+    <section id="SU-content">
+      <div class="container">
+        <div class="input-form-backgroud row">
+          <div class="input-form col-md-12 mx-auto">
+            <form class="validation-form" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="nickname" style="font-size: 110%; font-weight: bold;"></label>
+                  <input type="text" class="form-control" id="nickname" placeholder="사용자 ID" value="" required>
+                  <div class="invalid-feedback">
+                    사용자 ID를 입력해 주세요.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" style="font-size: 110%; font-weight: bold;"></label>
+                  <input type="email" class="form-control" id="email" placeholder="비밀번호" required>
+                  <div class="invalid-feedback">
+                    비밀번호를 입력해 주세요.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="name" style="font-size: 110%; font-weight: bold;"></label>
+                  <input type="password" class="form-control" id="password" placeholder="비밀번호 확인" value="" required>
+                  <div class="invalid-feedback">
+                    비밀번호를 확인해 주세요.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="name" style="font-size: 110%; font-weight: bold;"></label>
+                  <div style="display: flex;">
+                    <input type="email" class="form-control" id="passwordcheck" placeholder="이메일" value="" required
+                      style="width: 80%;">
+                    <button type="button" class="certification-button">
+                      인증
+                    </button>
+                  </div>
+                  <div class="invalid-feedback">
+                    이메일을 입력해 주세요.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4" style="margin-top: 150px;"></div>
+              <button id="join-button" class="btn btn-primary btn-lg btn-block" type="button" onclick="my">가입완료</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Scripts -->
+</body>
+
+</html>
