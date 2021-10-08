@@ -201,6 +201,25 @@ a:visited {
   padding: 0 5%;
   min-width: 150px;
 }
+.addition-button{
+  color: white;
+  background-color: #7AD8DF;
+  width: 160px;
+  height: 45px;
+  margin-left: 3%;
+  border-radius: 0.5em;
+  border: none;
+}
+.order-button {
+  width: 90%;
+  min-height: 50px;
+  margin: 0 5%;
+  align-self: center;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border-radius: 0.5em;
+}
 
 /* Bottom Menu Bar */
 #order-menu {
@@ -399,4 +418,48 @@ div > button {
   min-width: 140px;
   font-size: 0.7em;
   margin: 1%;
+}
+ .certification-button {
+  width: 20%; 
+  height: 32px;
+  margin:0;
+  margin-right: 5%;
+  background-color: black; 
+}
+
+/* Bottom Menu Bar */
+#bottom-menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: solid 2px #e1e1e1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  z-index: 999;
+  display: flex;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+#bottom-menu a {
+  text-decoration: none;
+}
+#bottom-menu a:link {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu a:visited {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu div {
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+#bottom-menu div div {
+  font-size: 55%;
+  font-weight: bold;
 }

@@ -1,0 +1,146 @@
+/* --Region Selection Page-- */
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  /* 320px */
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  /* border: 4px solid #000; */
+}
+body {
+  min-width: 320px;
+  max-width: 680px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 15px 15px 60px 15px;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* toolbar */
+#toolbar {
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+#toolbar div {
+  flex: 1;
+  margin-bottom: 0px;
+  display: inline;
+}
+#toolbar .TS-close-1 {
+  min-width: 24px;
+  min-height: 24px;
+  transform: translate(0%, 25%);
+}
+#toolbar .TS-close-2 {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: center;
+  transform: translate(0%, 10%);
+  flex: 3;
+  font-size: 140%;
+  font-weight: bold;
+}
+#toolbar .TS-close-2 > span {
+  font-size: 130%;
+}
+
+@media (min-width: 760px) {
+  /* Galaxy Fold */
+  #SU-content .certification-button {
+    height: 25px;
+  }
+}
+/* mainPage */
+/* Menu Content */
+#Menu-Content {
+  margin-top: 50px;
+}
+#Menu-Content > .container{
+  display: flex;
+  margin-top: 10px;
+}
+#Menu-Content > .container > a{
+  display:contents;
+}
+#Menu-Content > .container > a >.content{
+  flex: 1; 
+  width: 45%; 
+  height: 150px;
+  margin: 1%;
+  text-align: center;
+  border: 1px #858585 solid;
+  border-radius: 1em;
+  background-color: #F4F4F4;
+}
+#Menu-Content > .container > a > .content > p{
+  font-size: 150%;
+  font-weight: bold;
+  margin-top: 5%;
+}
+#Menu-Content > .container > a > .content > img{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 3%;
+}
+.put-in-button{
+  width: 90%;
+  font-size: 120%;
+  font-weight: bold;
+  height: 50px;
+  border: 1px #858585 solid;
+  background-color: white;
+  border-radius: 0.5em;
+  margin: 7% 5%;
+}
+
+/* Bottom Menu Bar */
+#bottom-menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: solid 2px #e1e1e1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  z-index: 999;
+  display: flex;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+#bottom-menu a {
+  text-decoration: none;
+}
+#bottom-menu a:link {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu a:visited {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu div {
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+#bottom-menu div div {
+  font-size: 55%;
+  font-weight: bold;
+}

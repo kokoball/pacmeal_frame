@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/master_content.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Order Page 1</title>
+</head>
+<style>
+  .button-st {
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 0.5em;
+  }
+</style>
+
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"></div>
+      <div class="TS-close-2">
+        <span>팩밀</span>파트너스
+      </div>
+      <div class="TS-close-3"></div>
+    </section>
+    <h2 style="text-align: center; margin-top: 30px; font-weight: bold;">입점신청</h2>
+
+    <!-- Shop Food Tab Menu  -->
+    <section id="tab-Menu">
+      <div class="allWrap">
+        <section class="content first">
+          <div class="content-1">
+            <div>사업자 정보</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+        <section class="content fifth">
+          <div class="content-1">
+            사업 유형
+          </div>
+          <div class="content-2">
+            <span class="payment-method" style="padding-left: 5%;">
+              <input type="radio" class="input-radio" name="radio" id="radio3" checked>
+              <label for="radio3" class="form-radio" checked>
+                <div>개인</div>
+              </label>
+            </span>
+            <span class="payment-method">
+              <input type="radio" class="input-radio" name="radio" id="radio4">
+              <label for="radio4" class="form-radio">
+                <div>법인</div>
+              </label>
+            </span>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">상호명</div>
+          <div class="content-2"><input type="text" placeholder="  사업자등록증에 표기된 상호명"></div>
+          <div class="content-1">사업자등록번호</div>
+          <div class="content-2"><input type="number" placeholder="  숫자만입력"></div>
+          <div class="content-1">대표자명</div>
+          <div class="content-2"><input type="text" placeholder="  사업자등록증에 표기된 대표자명"></div>
+          <div class="content-1">가게 카테고리</div>
+          <div class="content-2"><input type="text" placeholder=" "></div>
+          <div class="content-1">업종</div>
+          <div class="content-2"><input type="text" placeholder="  "></div>
+          <div class="content-1">사업장소재지</div>
+          <div class="content-2" style="width: 100%;"><input type="text" placeholder="  우편번호"><button type="button"
+              class="certification-button">주소찾기</button>
+          </div>
+          <div class="content-2"><input type="text" placeholder="  사업자등록증에 표기된 주소"></div>
+          <div class="content-2"><input type="text" placeholder="  상세 주소"></div>
+        </section>
+        <section class="content first">
+          <div class="content-1">
+            <div>관리자 정보</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">관리자명</div>
+          <div class="content-2"><input type="text" placeholder="  "></div>
+          <div class="content-1">이메일 주소</div>
+          <div class="content-2"><input type="text" placeholder="  "></div>
+          <div class="content-1">매장 전화번호</div>
+          <div class="content-2"><input type="number" placeholder="  숫자만 입력"></div>
+          <div class="content-1">은행선택</div>
+          <div class="selectbox">
+            <label for="select"></label>
+            <select id="select">
+              <option selected>&nbsp;한식</option>
+              <option>&nbsp;중식</option>
+              <option>&nbsp;일식</option>
+              <option>&nbsp;분식</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="content first">
+          <div class="content-1">
+            <div>정산계좌</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">은행선택</div>
+          <div class="selectbox">
+            <label for="select"></label>
+            <select id="select">
+              <option selected>&nbsp;한식</option>
+              <option>&nbsp;중식</option>
+              <option>&nbsp;일식</option>
+              <option>&nbsp;분식</option>
+            </select>
+          </div>
+          <div class="content-1">계좌번호</div>
+          <div class="content-2"><input type="text" placeholder="  숫자만 입력"></div>
+          <div class="content-1">예금주명</div>
+          <div class="content-2"><input type="text" placeholder="  "></div>
+          <span>개인사업자: 사업주명 = 예금주명</span><br>
+          <span>법인사업자: 사업체명 = 예금업체명</span>
+        </section>
+        <br>
+        <section class="content first">
+          <div class="content-1">
+            <div>이미지첨부</div>
+            <div style="font-weight:bolder;"></div>
+          </div>
+        </section>
+
+        <section class="content third">
+          <div class="content-1">사업자등록증</div>
+          <button type="button" class="addition-button">파일추가+</button>
+          <div class="content-1">통장사본</div>
+          <button type="button" class="addition-button">파일추가+</button>
+          <div class="content-1">영업신고증</div>
+          <button type="button" class="addition-button">파일추가+</button>
+          <div class="content-1">추가첨부서류</div>
+          <button type="button" class="addition-button">파일추가+</button>
+        </section>
+      </div>
+      <button type="button" class="order-button" style="margin-top:30px; font-weight: bold;">입점하기</button>
+    </section>
+
+
+
+    <!-- Bottom Menu Bar -->
+    <div id="bottom-menu">
+      <div><a href="main_Page_1.html"><img src="images/icon/akar-icons_home.jpg">
+          <div>홈</div>
+        </a></div>
+      <div><a href="near_Shop_Page_1.html"><img src="images/icon/bi_chat-square.jpg">
+          <div>톡 문의</div>
+        </a></div>
+      <div><a href="order_History.html"><img src="images/icon/bell.jpg">
+          <div>알림</div>
+        </a></div>
+      <div><a href="my_Page_1.html"><img src="images/icon/Group.jpg">
+          <div>더보기</div>
+        </a></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Time Sale Swiper -->
+  <script>
+    var swiper = new Swiper(".time-sale-Swiper", {
+      slidesPerView: "4",
+      spaceBetween: 50,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+
+</html>
