@@ -64,59 +64,107 @@ a:visited {
     height: 25px;
   }
 }
-/* mainPage */
-/* Menu Content */
-#Menu-Content {
-  margin-top: 50px;
+
+.allWrap {
+  width: 100%;
+  margin: 0 auto;
 }
-#Menu-Content > .container{
+.tabBox {
+  margin: 0 auto;
   display: flex;
-  margin-top: 10px;
 }
-#Menu-Content > .container > a{
-  display:contents;
-}
-#Menu-Content > .container > a >.content{
-  flex: 1; 
-  width: 45%; 
-  height: 150px;
-  margin: 1%;
+.tab-link {
+  width: 50%;
+  display: inline-block;
+  padding: 3%;
   text-align: center;
-  border: 1px #858585 solid;
-  border-radius: 1em;
-  background-color: #F4F4F4;
+  background-color: transparent;
+  color: #eeeeee;
+  cursor: pointer;
+  margin: 0;
+  border-bottom: solid 3px #e1e1e1;
 }
-
-#Menu-Content > .container > a > .content > p{
-  font-size: 150%;
-  font-weight: bold;
-  margin-top: 5%;
+.tab-link.current {
+  background-color: transparent;
+  color: #00d1c4;
+  font-weight: 600;
+  border-bottom: solid 3px #00d1c4;
 }
-#Menu-Content > .container > a > .content > img{
+.tab-content {
+  display: none;
+}
+.tab-content.current {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
+  min-height: 130px;
+  margin-bottom: 3%;
 }
-@media (min-width: 600px) {
-  #Menu-Content > .container > a >.content{
-
-    min-height: 200px;
-  }
-  #Menu-Content > .container > a > .content > img{
-    width: 120px;
-    height: 120px;
-  }
+.tab-content.current .content a {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #EEEEEE;
 }
-.put-in-button{
-  width: 90%;
-  font-size: 120%;
+.tab-content.current .content a > :nth-child(1) {
+  flex: 15;
+  padding: 1%;
+  height: auto;
+}
+.tab-content.current .content a > :nth-child(2) {
+  flex: 1;
+  padding: 1%;
+  height: auto;
+}
+.tab-content.current .content a > :nth-child(2) > img{
+  margin-top: 40px;
+}
+/* No Order */
+.no-order {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  line-height: 200%;
+  text-align: center;
+  position: relative;
+}
+.no-order > div {
+  position: absolute;
+  top: 40%;
+  width: 80%;
+  margin: 0 10%;
+}
+.no-order > div > div {
+  color: gray;
+}
+.last-order{
+  border: 1px solid gray;
+  margin: 0 20%;
+  padding: 0.5% 0;
+  border-radius: 1em;
+}
+/* content title */
+.content-title {
+  padding: 3% 2% 2% 2%;
+  font-size: 160%;
   font-weight: bold;
-  height: 50px;
-  border: 1px #858585 solid;
-  background-color: white;
-  border-radius: 0.5em;
-  margin: 7% 5%;
+  display: flex;
 }
+.content-title > div {
+  color: #FF0000;
+  font-size: 60%;
+  font-weight: bold;
+  padding: 1% 5%;
+}
+.FF5432{
+  color: #FF5432;
+}
+.content-title2 {
+  padding: 0 1% 0 1%;
+}
+/* order complete*/
+
+
 
 /* Bottom Menu Bar */
 #bottom-menu {
