@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-sclae=1, maximum-scale=1">
+  <link rel="stylesheet" href="assets/css/mainStore.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Main Page</title>
+</head>
+<style>
+  h3 {
+    margin-left: 2%;
+  }
+</style>
+
+<body>
+  <div id="wrap">
+    <!-- Toolbar -->
+    <section id="toolbar">
+      <div class="TS-close-1"><img src="./images/icon/arrow-left.svg" alt=""></div>
+      <div class="TS-close-2">
+        <span>팩밀</span>파트너스
+      </div>
+      <div class="TS-close-3"></div>
+    </section>
+
+    <section id="main-content">
+      <h3>가게정보수정</h3>
+      <div class="container">
+        <span>상호명</span>
+        <input class="input1" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>가게 대표 이미지</span>
+        <img class="img1" src="images/icon/gray_box.png" alt="">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>가게 소개</span>
+        <textarea class="input2" type="text">항상 푸짐한 양과 최고의 맛, 서비스로 보답하겠습니다.</textarea>
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>가게 주소</span>
+        <input class="input3" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>가게 전화</span>
+        <input class="input3" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>영업시간</span>
+        <input class="input3" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>마감 주문 시간</span>
+        <input class="input3" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>영업상태</span>
+        <div style="display: flex;">
+          <span class="payment-method" style="display: flex; padding-left: 5%;">
+            <input type="radio" class="input-radio" name="radio" id="radio3" checked>
+            <label for="radio3" class="form-radio" checked>
+              <div style="width: 50px;">개인</div>
+            </label>
+          </span>
+          <span class="payment-method" style="display: flex;">
+            <input type="radio" class="input-radio" name="radio" id="radio4">
+            <label for="radio4" class="form-radio">
+              <div style="width: 50px;">법인</div>
+            </label>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="main-content">
+      <div class="container">
+        <span>주차 가능 여부</span>
+        <input class="input3" type="text">
+      </div>
+    </section>
+
+    <section id="main-content">
+      <h3>리뷰 관리</h3>
+      <div class="container">
+        <span>리뷰 작성일</span>
+        <div class="radio-container">
+          <ul style="display: flex;">
+            <li>
+              <input type="radio" id="1-option" name="selector">
+              <label for="1-option">오늘</label>
+
+              <div class="check"></div>
+            </li>
+
+            <li>
+              <input type="radio" id="2-option" name="selector">
+              <label for="2-option">1주일</label>
+
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" id="3-option" name="selector">
+              <label for="3-option">1개월</label>
+
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+          </ul>
+          <ul style="display: flex;">
+            <li>
+              <input type="radio" id="4-option" name="selector">
+              <label for="4-option">3개월</label>
+
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" id="5-option" name="selector">
+              <label for="5-option">6개월</label>
+
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+
+            <li>
+              <input type="radio" id="6-option" name="selector">
+              <label for="6-option">1년</label>
+
+              <div class="check">
+                <div class="inside"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+  <!-- Bottom Menu Bar -->
+  <div id="bottom-menu">
+    <div><a href="main_Page_1.html"><img src="images/icon/akar-icons_home.jpg">
+        <div>홈</div>
+      </a></div>
+    <div><a href="near_Shop_Page_1.html"><img src="images/icon/bi_chat-square.jpg">
+        <div>톡 문의</div>
+      </a></div>
+    <div><a href="order_History.html"><img src="images/icon/bell.jpg">
+        <div>알림</div>
+      </a></div>
+    <div><a href="my_Page_1.html"><img src="images/icon/Group.jpg">
+        <div>더보기</div>
+      </a></div>
+  </div>
+  <!-- Scripts -->
+  <script>
+    $('.tab-link').click(function () {
+      var tab_id = $(this).attr('data-tab');
+
+      $('.tab-link').removeClass('current');
+      $('.tab-content').removeClass('current');
+
+      $(this).addClass('current');
+      $("#" + tab_id).addClass('current');
+    });
+  </script>
+</body>
+
+</html>
