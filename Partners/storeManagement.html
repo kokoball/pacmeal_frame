@@ -11,7 +11,15 @@
 </head>
 <style>
   h3 {
-    margin-left: 2%;
+    margin: 0 0 4% 5%;
+  }
+
+  .s-button {
+    background-color: black;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 0.5em;
   }
 </style>
 
@@ -29,49 +37,49 @@
     <section id="main-content">
       <h3>가게정보수정</h3>
       <div class="container">
-        <span>상호명</span>
+        <span>상호명&nbsp;&nbsp;&nbsp;</span>
         <input class="input1" type="text">
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>가게 대표 이미지</span>
+        <span>가게 대표 이미지&nbsp;&nbsp;</span>
         <img class="img1" src="images/icon/gray_box.png" alt="">
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>가게 소개</span>
+        <span>가게 소개&nbsp;</span>
         <textarea class="input2" type="text">항상 푸짐한 양과 최고의 맛, 서비스로 보답하겠습니다.</textarea>
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>가게 주소</span>
+        <span>가게 주소&nbsp;</span>
         <input class="input3" type="text">
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>가게 전화</span>
+        <span>가게 전화&nbsp;</span>
         <input class="input3" type="text">
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>영업시간</span>
+        <span>영업시간&nbsp;</span>
         <input class="input3" type="text">
       </div>
     </section>
 
     <section id="main-content">
       <div class="container">
-        <span>마감 주문 시간</span>
+        <span>마감주문시간</span>
         <input class="input3" type="text">
       </div>
     </section>
@@ -83,13 +91,13 @@
           <span class="payment-method" style="display: flex; padding-left: 5%;">
             <input type="radio" class="input-radio" name="radio" id="radio3" checked>
             <label for="radio3" class="form-radio" checked>
-              <div style="width: 50px;">개인</div>
+              <div style="width: 60px;">영업중</div>
             </label>
           </span>
           <span class="payment-method" style="display: flex;">
             <input type="radio" class="input-radio" name="radio" id="radio4">
             <label for="radio4" class="form-radio">
-              <div style="width: 50px;">법인</div>
+              <div style="width: 100px;">영업일시중지</div>
             </label>
           </span>
         </div>
@@ -98,7 +106,7 @@
 
     <section id="main-content">
       <div class="container">
-        <span>주차 가능 여부</span>
+        <span>주차가능여부</span>
         <input class="input3" type="text">
       </div>
     </section>
@@ -162,10 +170,37 @@
               </div>
             </li>
           </ul>
+          <div style="text-align: center; margin-top: 20px;">
+            <input type="date" style="width: 180px;">
+            <div>~</div>
+            <input type="date" style="width: 180px;">
+          </div>
+          <br>
+          <button class="s-button" style="float: right;">검색</button>
         </div>
       </div>
     </section>
 
+    <section id="main-content">
+      <h3>리뷰목록 (총 <span>0개</span>)</h3>
+
+      <div class="selectbox" style="margin-left: 5%;">
+        <label for="select"></label>
+        <select id="select" style="width: 100px; height: 30px;">
+          <option selected>&nbsp;등록일순</option>
+          <option>&nbsp;10 분</option>
+          <option>&nbsp;20 분</option>
+        </select>
+      </div>
+      <div style="text-align: center; margin: 20px 5%;">
+        <img src="images/icon/gray_box.png" alt="" style="width:300px; height: 180px;">
+      </div>
+
+      <div style="text-align: center; margin: 5% ;">
+        <button class="s-button" style="width:90%">변경사항 저장</button>
+
+      </div>
+    </section>
 
 
   </div>
@@ -185,18 +220,8 @@
         <div>더보기</div>
       </a></div>
   </div>
+
   <!-- Scripts -->
-  <script>
-    $('.tab-link').click(function () {
-      var tab_id = $(this).attr('data-tab');
-
-      $('.tab-link').removeClass('current');
-      $('.tab-content').removeClass('current');
-
-      $(this).addClass('current');
-      $("#" + tab_id).addClass('current');
-    });
-  </script>
 </body>
 
 </html>
