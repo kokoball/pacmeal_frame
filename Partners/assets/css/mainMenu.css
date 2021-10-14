@@ -1,0 +1,140 @@
+/* --Region Selection Page-- */
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  /* 320px */
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  /* border: 4px solid #000; */
+}
+body {
+  min-width: 320px;
+  max-width: 680px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 15px 15px 60px 15px;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* toolbar */
+#toolbar {
+  background: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid #EEEEEE;
+}
+#toolbar div {
+  flex: 1;
+  margin-bottom: 0px;
+  display: inline;
+}
+#toolbar .TS-close-1 {
+  min-width: 24px;
+  min-height: 24px;
+  transform: translate(0%, 25%);
+}
+#toolbar .TS-close-2 {
+  min-width: 24px;
+  min-height: 24px;
+  text-align: center;
+  transform: translate(0%, 10%);
+  flex: 3;
+  font-size: 140%;
+  font-weight: bold;
+}
+#toolbar .TS-close-2 > span {
+  font-size: 130%;
+}
+
+@media (min-width: 760px) {
+  /* Galaxy Fold */
+  #SU-content .certification-button {
+    height: 25px;
+  }
+}
+
+/* main-content */
+#main-content > .m-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+#main-content > .m-list > div > .m-img{
+width: 120px;
+height: 120px;
+}
+.s-border {
+  border-bottom: 1px solid #EEEEEE;
+}
+.n-button {
+  margin: 5%;
+  width: 90%;
+  height: 50px;
+  border: none;
+  background-color: #7AD8DF;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0.5em;
+}
+
+.b-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  margin: 3%;
+  width: 80px;
+  height: 30px;
+  border: none;
+  color: white;
+}
+
+/* Bottom Menu Bar */
+#bottom-menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: solid 2px #e1e1e1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  z-index: 999;
+  display: flex;
+  min-width: 320px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+#bottom-menu a {
+  text-decoration: none;
+}
+#bottom-menu a:link {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu a:visited {
+  text-decoration: none;
+  color: black;
+}
+#bottom-menu div {
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+#bottom-menu div div {
+  font-size: 55%;
+  font-weight: bold;
+}
