@@ -1,9 +1,7 @@
-# pacmeal_frame
-2021 세대별 맞춤형 예비창업가발굴육성사업
-웹_프로토 타입
-------
+# 2021 세대별 맞춤형 예비창업가발굴육성사업 (웹 프로토 타입)
 
-# 학습 자료 / 참고 사이트
+
+## 학습 자료 / 참고 사이트
 1. swiper API   
 https://swiperjs.com/demos
 
@@ -13,9 +11,9 @@ https://myhappyman.tistory.com/m/134
 3. js toggle 간단히 구현하기   
 https://goddino.tistory.com/129
 
-------
-
-# error 모음
+## error 모음
 
 1. display : flex 설정시 display:none class 추가해도 변경 X 
 2. querySelector 는 . # 와 같이 사용
+
+## 실행 화면
